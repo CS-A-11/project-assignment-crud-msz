@@ -1,0 +1,170 @@
+doctype html
+html
+  head
+    title HOSTLYTE
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://www.w3schools.com/w3css/4/w3.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Raleway')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    style.
+      body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+      .myLink {display: none}
+  body.w3-light-grey
+    // Navigation Bar
+    .w3-bar.w3-white.w3-border-bottom.w3-xlarge
+      a.w3-bar-item.w3-button.w3-text-red.w3-hover-red(href='#')
+        b
+          i.fa.fa-map-marker.w3-margin-right
+          | Hostlyte
+      a.w3-bar-item.w3-button.w3-right.w3-hover-red.w3-text-grey(href='#')
+        i.fa.fa-search
+    // Header
+    header.w3-display-container.w3-content.w3-hide-small(style='max-width:1500px')
+      img.w3-image(src='/home/msz/Desktop/5thSemester/Web/hostlyte/public/images/london2.jpg', alt='London', width='1500', height='700')
+      .w3-display-middle(style='width:65%')
+        .w3-bar.w3-black
+          button.w3-bar-item.w3-button.tablink(onclick="openLink(event, 'Flight');")
+            i.fa.fa-plane.w3-margin-right
+            | Flight
+          button.w3-bar-item.w3-button.tablink(onclick="openLink(event, 'hostel');")
+            i.fa.fa-bed.w3-margin-right
+            | hostel
+          button.w3-bar-item.w3-button.tablink(onclick="openLink(event, 'Car');")
+            i.fa.fa-car.w3-margin-right
+            | Rental
+        // Tabs
+        #Flight.w3-container.w3-white.w3-padding-16.myLink
+          h3 Find Best Hostel !
+          .w3-row-padding(style='margin:0 -16px;')
+            .w3-half
+              label Location
+              input.w3-input.w3-border(placeholder='Universrity Name', type='text')
+          p
+            button.w3-button.w3-dark-grey Search and find
+        #hostel.w3-container.w3-white.w3-padding-16.myLink
+          h3 Find the best hostels
+          p Book a hostels with us and get the best fares and promotions.
+          p We know hostels - we know comfort.
+          p
+            button.w3-button.w3-dark-grey Search Hostels
+        #Car.w3-container.w3-white.w3-padding-16.myLink
+          p
+            span.w3-tag.w3-deep-orange DISCOUNT!
+            |  Special offer if you book today: 25% off anywhere in the world with CarServiceRentalRUs
+          input.w3-input.w3-border(placeholder='Pick-up point', type='text')
+          p
+            button.w3-button.w3-dark-grey Search Availability
+    // Page content
+    .w3-content(style='max-width:1100px;')
+      // Good offers
+      .w3-container.w3-margin-top
+        h3 Good Offers Right Now
+        h6
+          | Up to
+          strong 50%
+          |  discount.
+      .w3-row-padding.w3-text-white.w3-large
+        .w3-half.w3-margin-bottom
+          .w3-display-container
+            img(src='https://www.w3schools.com/w3images/cinqueterre.jpg', alt='Cinque Terre', style='width:100%')
+            span.w3-display-bottomleft.w3-padding Cinque Terre
+        .w3-half
+          .w3-row-padding(style='margin:0 -16px')
+            .w3-half.w3-margin-bottom
+              .w3-display-container
+                img(src='https://www.w3schools.com/w3images/newyork2.jfg', alt='New York', style='width:100%')
+                span.w3-display-bottomleft.w3-padding New York
+            .w3-half.w3-margin-bottom
+              .w3-display-container
+                img(src='https://www.w3schools.com/w3images/sanfran.jpg', alt='San Francisco', style='width:100%')
+                span.w3-display-bottomleft.w3-padding San Francisco
+          .w3-row-padding(style='margin:0 -16px')
+            .w3-half.w3-margin-bottom
+              .w3-display-container
+                img(src='https://www.w3schools.com/w3images/pisa.jpg', alt='Pisa', style='width:100%')
+                span.w3-display-bottomleft.w3-padding Pisa
+            .w3-half.w3-margin-bottom
+              .w3-display-container
+                img(src='https://www.w3schools.com/w3images/paris.jpg', alt='Paris', style='width:100%')
+                span.w3-display-bottomleft.w3-padding Paris
+      // Explore Nature
+      .w3-container
+        h3 Explore Nature
+        p Travel with us and see nature at its finest.
+      .w3-row-padding
+        .w3-half.w3-margin-bottom
+          img(src='https://www.w3schools.com/w3images/ocean2.jpg', alt='Norway', style='width:100%')
+          .w3-container.w3-white
+            h3 West Coast, Norway
+            p.w3-opacity Roundtrip from $79
+            p Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+            button.w3-button.w3-margin-bottom Buy Tickets
+        .w3-half.w3-margin-bottom
+          img(src='https://www.w3schools.com/w3images/mountains2.jpg', alt='Austria', style='width:100%')
+          .w3-container.w3-white
+            h3 Mountains, Austria
+            p.w3-opacity One-way from $39
+            p Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+            button.w3-button.w3-margin-bottom Buy Tickets
+      // Newsletter
+      .w3-container
+        .w3-panel.w3-padding-16.w3-black.w3-opacity.w3-card.w3-hover-opacity-off
+          h2 Get the best offers first!
+          p Join our newsletter.
+          label E-mail
+          input.w3-input.w3-border(placeholder='Your Email address', type='text')
+          button.w3-button.w3-red.w3-margin-top(type='button') Subscribe
+      // Contact
+      .w3-container
+        h2 Contact
+        p Let us book your next trip!
+        i.fa.fa-map-marker(style='width:30px')
+        |  Chicago, US
+        br
+        i.fa.fa-phone(style='width:30px')
+        |  Phone: +00 151515
+        br
+        i.fa.fa-envelope(style='width:30px')
+        |  Email: mail@mail.com
+        br
+        form(action='/action_page.php', target='_blank')
+          p
+            input.w3-input.w3-padding-16.w3-border(placeholder='Name', required='', name='Name', type='text')
+          p
+            input.w3-input.w3-padding-16.w3-border(placeholder='Email', required='', name='Email', type='text')
+          p
+            input.w3-input.w3-padding-16.w3-border(placeholder='Message', required='', name='Message', type='text')
+          p
+            button.w3-button.w3-black.w3-padding-large(type='submit') SEND MESSAGE
+      // End page content
+      // Footer
+      footer.w3-container.w3-center.w3-opacity.w3-margin-bottom
+        h5 Find Us On
+        .w3-xlarge.w3-padding-16
+          i.fa.fa-facebook-official.w3-hover-opacity
+          i.fa.fa-instagram.w3-hover-opacity
+          i.fa.fa-snapchat.w3-hover-opacity
+          i.fa.fa-pinterest-p.w3-hover-opacity
+          i.fa.fa-twitter.w3-hover-opacity
+          i.fa.fa-linkedin.w3-hover-opacity
+        p
+          | Powered by
+          a.w3-hover-text-green(href='github.com/MSZ991', target='_blank') MSZ991
+      script.
+        // Tabs
+        function openLink(evt, linkName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("myLink");
+        for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+        }
+        document.getElementById(linkName).style.display = "block";
+        evt.currentTarget.className += " w3-red";
+        }
+        // Click on the first tablink on load
+        document.getElementsByClassName("tablink")[0].click();

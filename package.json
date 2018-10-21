@@ -1,0 +1,12 @@
+{
+  "name": "hostlyte",
+  "version": "1.0.0",
+  "description": "Web",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+},
+  "author": "MSZ991",
+  "license": "ISC"
+}

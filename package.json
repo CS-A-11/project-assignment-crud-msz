@@ -6,7 +6,11 @@
   "private": true,
   "scripts": {
     "start": "node app.js"
-},
+  },
   "author": "MSZ991",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "pug": "^2.0.3"
+  }
 }

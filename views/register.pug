@@ -1,0 +1,402 @@
+doctype html
+html(lang="en")
+  head
+    meta(http-equiv="content-type", content="text/html;charset=UTF-8")
+    //if IE
+      meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    |       
+    meta(name="description", content="")
+    |       
+    meta(name="author", content="ScriptsBundle")
+    |       
+    title Hostlyte| Largest Hostel Classified Portal
+    // =-=-=-=-=-=-= Favicons Icon =-=-=-=-=-=-=
+    link(rel="icon", href="images/favicon.ico", type="image/x-icon")
+    // =-=-=-=-=-=-= Mobile Specific =-=-=-=-=-=-=
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+    // =-=-=-=-=-=-= Bootstrap CSS Style =-=-=-=-=-=-=
+    link(rel="stylesheet", href="css/bootstrap.css")
+    // =-=-=-=-=-=-= Template CSS Style =-=-=-=-=-=-=
+    link(rel="stylesheet", href="css/style.css")
+    // =-=-=-=-=-=-= Font Awesome =-=-=-=-=-=-=
+    link(rel="stylesheet", href="css/font-awesome.css", type="text/css")
+    // =-=-=-=-=-=-= Flat Icon =-=-=-=-=-=-=
+    link(href="css/flaticon.css", rel="stylesheet")
+    // =-=-=-=-=-=-= Et Line Fonts =-=-=-=-=-=-=
+    link(rel="stylesheet", href="css/et-line-fonts.css", type="text/css")
+    // =-=-=-=-=-=-= Menu Drop Down =-=-=-=-=-=-=
+    link(rel="stylesheet", href="css/forest-menu.css", type="text/css")
+    // =-=-=-=-=-=-= Animation =-=-=-=-=-=-=
+    link(rel="stylesheet", href="css/animate.min.css", type="text/css")
+    // =-=-=-=-=-=-= Select Options =-=-=-=-=-=-=
+    link(href="css/select2.min.css", rel="stylesheet")
+    // =-=-=-=-=-=-= noUiSlider =-=-=-=-=-=-=
+    link(href="css/nouislider.min.css", rel="stylesheet")
+    // =-=-=-=-=-=-= Listing Slider =-=-=-=-=-=-=
+    link(href="css/slider.css", rel="stylesheet")
+    // =-=-=-=-=-=-= Owl carousel =-=-=-=-=-=-=
+    link(rel="stylesheet", type="text/css", href="css/owl.carousel.css")
+    |       
+    link(rel="stylesheet", type="text/css", href="css/owl.theme.css")
+    // =-=-=-=-=-=-= Check boxes =-=-=-=-=-=-=
+    link(href="skins/minimal/minimal.css", rel="stylesheet")
+    // =-=-=-=-=-=-= Responsive Media =-=-=-=-=-=-=
+    link(href="css/responsive-media.css", rel="stylesheet")
+    // =-=-=-=-=-=-= Template Color =-=-=-=-=-=-=
+    link#color(rel="stylesheet", href="css/colors/defualt.css")
+    // =-=-=-=-=-=-= For Style Switcher =-=-=-=-=-=-=
+    link#theme-color(rel="stylesheet", type="text/css", href="#")
+    // =-=-=-=-=-=-= Check boxes =-=-=-=-=-=-=
+    link(href="skins/minimal/minimal.css", rel="stylesheet")
+    // JavaScripts
+    script(src="js/modernizr.js")
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js")
+      |       
+      script(src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js")
+  |    
+  body
+    // =-=-=-=-=-=-= Preloader =-=-=-=-=-=-=
+    #loader-wrapper
+      #loader
+      |          
+      .loader-section.section-left
+      |          
+      .loader-section.section-right
+    // =-=-=-=-=-=-= Light Header =-=-=-=-=-=-=
+    .colored-header
+      // Top Bar
+      .header-top
+        .container
+          .row
+            // Header Top Left
+            .header-top-left.col-md-8.col-sm-6.col-xs-12.hidden-xs
+              ul.listnone
+                li
+                  a(href="about.html")
+                    i.fa.fa-heart-o(aria-hidden="true")
+                    |  About
+                |                         
+                li
+                  a(href="faqs.html")
+                    i.fa.fa-folder-open-o(aria-hidden="true")
+                    |  FAQS
+            // Header Top Right Social
+            .header-right.col-md-4.col-sm-6.col-xs-12
+              .pull-right
+                ul.listnone
+                  li
+                    a(href="login.html")
+                      i.fa.fa-sign-in
+                      |  Log in
+                  |                            
+                  li
+                    a(href="register.html")
+                      i.fa.fa-unlock(aria-hidden="true")
+                      |  Register
+      // Top Bar End
+      // Navigation Menu
+      nav#menu-1.mega-menu
+        // menu list items container
+        section.menu-list-items
+          .container
+            .row
+              .col-lg-12.col-md-12
+                // menu logo
+                ul.menu-logo
+                  li
+                    a(href="index.html")
+                      img(src="images/logo21.png", alt="HOSTLYTE")
+                // menu links
+                ul.menu-links
+                  // active class
+                  li
+                    a(href="javascript:void(0)")
+                      | Home 
+                      i
+                  |                               
+                  li
+                    a(href="javascript:void(0)")
+                      | Listing 
+                      i
+                  |                               
+                  li
+                    a(href="javascript:void(0)")
+                      | Categories 
+                      i
+                  |                               
+                  li
+                    a(href="contact.html") Contact 
+                |                            
+                ul.menu-search-bar
+                  li
+                    a.btn.btn-light(href=" ")
+                      i.fa.fa-plus(aria-hidden="true")
+                      |  Post Free Ad
+    // Navigation Menu End
+    // =-=-=-=-=-=-= Light Header End  =-=-=-=-=-=-=
+    // =-=-=-=-=-=-= Transparent Breadcrumb =-=-=-=-=-=-=
+    .page-header-area
+      .container
+        .row
+          .col-lg-12.col-md-12.col-sm-12.col-xs-12
+            .header-page
+              h1 Create Your Account
+    // Small Breadcrumb
+    .small-breadcrumb
+      .container
+        .breadcrumb-link
+          ul
+            li
+              a(href="index.html") Home Page
+            |                   
+            li
+              a(href="#") Pages
+            |                   
+            li
+              a.active(href="#") Sign Up
+    // Small Breadcrumb
+    // =-=-=-=-=-=-= Transparent Breadcrumb End =-=-=-=-=-=-=
+    // =-=-=-=-=-=-= Main Content Area =-=-=-=-=-=-=
+    .main-content-area.clearfix
+      // =-=-=-=-=-=-= Latest Ads =-=-=-=-=-=-=
+      section.section-padding.error-page.pattern-bg
+        // Main Container
+        .container
+          // Row
+          .row
+            // Middle Content Area
+            .col-md-5.col-md-push-7.col-sm-12.col-xs-12
+              // Form
+              .form-grid
+                form
+                  .form-group
+                    label Name
+                    |                               
+                    input.form-control(placeholder="Enter Your Name", type="text")
+                  |                            
+                  .form-group
+                    label Contact Number
+                    |                               
+                    input.form-control(placeholder="Enter Your Contact Number", type="text")
+                  |                            
+                  .form-group
+                    label Email
+                    |                               
+                    input.form-control(placeholder="Your Email", type="email")
+                  |                            
+                  .form-group
+                    label Password
+                    |                               
+                    input.form-control(placeholder="Your Password", type="password")
+                  |                            
+                  .form-group
+                    .row
+                      .col-xs-12.col-sm-7
+                        .skin-minimal
+                          ul.list
+                            li
+                              input#minimal-checkbox-1(type="checkbox")
+                              |                                              
+                              label(for="minimal-checkbox-1")
+                                | i agree 
+                                a(href="#") Terms of Services
+                      |                                  
+                      .col-xs-12.col-sm-5.text-right
+                        p.help-block
+                          a(data-target="#myModal", data-toggle="modal") Forgot password?
+                  |                            
+                  button.btn.btn-theme.btn-lg.btn-block Register
+              // Form
+            |                   
+            .col-md-7.col-md-pull-5.col-sm-12.col-xs-12
+              .heading-panel
+                h3.main-title.text-left
+                  | Create Your Account
+              |                      
+              .content-info
+                .features
+                  .features-icons
+                    img(src="images/icons/chat.png", alt="img")
+                  |                            
+                  .features-text
+                    h3 Chat & Messaging
+                    |                               
+                    p
+                      | Access your chats and account info from any device.
+                |                         
+                .features
+                  .features-icons
+                    img(src="images/icons/panel.png", alt="img")
+                  |                            
+                  .features-text
+                    h3 User Dashboard
+                    |                               
+                    p
+                      | Maintain a wishlist by saving your favourite items.
+                |                         
+                .features
+                  .features-icons
+                    img(src="images/icons/history.png", alt="img")
+                  |                            
+                  .features-text
+                    h3 Track History
+                    |                               
+                    p
+                      | Track the status of your ads history.
+                |                         
+                .features
+                  .features-icons
+                    img(src="images/icons/featured-listing.png", alt="img")
+                  |                            
+                  .features-text
+                    h3 features Listing
+                    |                               
+                    p
+                      | Get more value fro your ad.
+                |                         
+                span.arrowsign.hidden-sm.hidden-xs
+                  img(src="images/arrow.png", alt="")
+            // Middle Content Area  End
+          // Row End
+        // Main Container End
+      // =-=-=-=-=-=-= Ads Archives End =-=-=-=-=-=-=
+      // =-=-=-=-=-=-= FOOTER =-=-=-=-=-=-=
+      // =-=-=-=-=-=-= FOOTER =-=-=-=-=-=-=
+      .footer-top
+        .container
+          .row
+            .col-md-3.col-sm-6.col-xs-12
+              // Info Widget
+              .widget
+                .logo
+                  img(alt="HOSTLYTE", src="images/logo12.png")
+                |                         
+                p DESCRIPTION DAALO
+                |                         
+                ul
+                  li
+                    img(src="images/appstore.png", alt="")
+                  |                            
+                  li
+                    img(src="images/googleplay.png", alt="")
+              // Info Widget Exit
+            |                   
+            .col-md-3.col-sm-6.col-xs-12
+              // Follow Us
+              .widget.socail-icons
+                h5 Follow Us
+                |                         
+                ul
+                  li
+                    a.fb(href="")
+                      i.fa.fa-facebook
+                    span Facebook
+                  |                            
+                  li
+                    a.twitter(href="")
+                      i.fa.fa-twitter
+                    span Twitter
+                  |                            
+                  li
+                    a.linkedin(href="")
+                      i.fa.fa-linkedin
+                    span Linkedin
+                  |                            
+                  li
+                    a.googleplus(href="")
+                      i.fa.fa-google-plus
+                    span Google+
+              // Follow Us End
+            |                   
+            .col-md-6.col-sm-6.col-xs-12
+              // Newslatter
+              .widget.widget-newsletter
+                h5 Singup for Weekly Newsletter
+                |                         
+                .fieldset
+                  p
+                    | We may send you information about related events, webinars, products and services which we believe.
+                  |                            
+                  form
+                    input(value="Enter your email address", type="text")
+                    |                               
+                    input.submit-btn(name="submit", value="Submit", type="submit")
+              // Newslatter
+      // Copyrights
+      .copyrights
+        .container
+          .copyright-content
+            .row
+              .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                p
+                  | © 2018 Hostlyte All rights reserved. Design by 
+                  a(href="github.com/msz991", target="_blank")  MSZ 
+      // =-=-=-=-=-=-= FOOTER END =-=-=-=-=-=-=
+    // Main Content Area End
+    // Forget Password
+    .custom-modal
+      #myModal.modal.fade(role="dialog")
+        .modal-dialog
+          // Modal content
+          .modal-content
+            .modal-header.rte
+              h2.modal-title Forgot Your Password ?
+            |                   
+            form
+              .modal-body
+                .form-group
+                  label Email
+                  |                            
+                  input.form-control(placeholder="Enter Your Email Adress", type="email")
+              |                      
+              .modal-footer
+                button.btn.btn-default(type="button") Reset My Account
+                |                         
+                button.btn.btn-dark(type="button", data-dismiss="modal") Cancel
+    // Post Ad Sticky
+    a.sticky-post-button.hidden-xs(href="#")
+      span.sell-icons
+        i.flaticon-transport-9
+      |          
+      h4 SELL
+    // Back To Top
+    a.cd-top(href="#0") Top
+    // =-=-=-=-=-=-= JQUERY =-=-=-=-=-=-=
+    script(src="js/jquery.min.js")
+    // Bootstrap Core Css
+    script(src="js/bootstrap.min.js")
+    // Jquery Easing
+    script(src="js/easing.js")
+    // Menu Hover
+    script(src="js/forest-megamenu.js")
+    // Jquery Appear Plugin
+    script(src="js/jquery.appear.min.js")
+    // Numbers Animation
+    script(src="js/jquery.countTo.js")
+    // Jquery Smooth Scroll
+    script(src="js/jquery.smoothscroll.js")
+    // Jquery Select Options
+    script(src="js/select2.min.js")
+    // noUiSlider
+    script(src="js/nouislider.all.min.js")
+    // Carousel Slider
+    script(src="js/carousel.min.js")
+    |       
+    script(src="js/slide.js")
+    // Image Loaded
+    script(src="js/imagesloaded.js")
+    |       
+    script(src="js/isotope.min.js")
+    // CheckBoxes
+    script(src="js/icheck.min.js")
+    // Jquery Migration
+    script(src="js/jquery-migrate.min.js")
+    // Sticky Bar
+    script(src="js/theia-sticky-sidebar.js")
+    // Style Switcher
+    script(src="js/color-switcher.js")
+    // Template Core JS
+    script(src="js/custom.js")

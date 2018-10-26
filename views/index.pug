@@ -1,170 +1,1366 @@
 doctype html
-html
+html(lang="en")
   head
-    title HOSTLYTE
-    meta(charset='UTF-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(rel='stylesheet', href='https://www.w3schools.com/w3css/4/w3.css')
-    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Raleway')
-    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
-    style.
-      body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
-      .myLink {display: none}
-  body.w3-light-grey
-    // Navigation Bar
-    .w3-bar.w3-white.w3-border-bottom.w3-xlarge
-      a.w3-bar-item.w3-button.w3-text-red.w3-hover-red(href='#')
-        b
-          i.fa.fa-map-marker.w3-margin-right
-          | Hostlyte
-      a.w3-bar-item.w3-button.w3-right.w3-hover-red.w3-text-grey(href='#')
-        i.fa.fa-search
-    // Header
-    header.w3-display-container.w3-content.w3-hide-small(style='max-width:1500px')
-      img.w3-image(src='/home/msz/Desktop/5thSemester/Web/hostlyte/public/images/london2.jpg', alt='London', width='1500', height='700')
-      .w3-display-middle(style='width:65%')
-        .w3-bar.w3-black
-          button.w3-bar-item.w3-button.tablink(onclick="openLink(event, 'Flight');")
-            i.fa.fa-plane.w3-margin-right
-            | Flight
-          button.w3-bar-item.w3-button.tablink(onclick="openLink(event, 'hostel');")
-            i.fa.fa-bed.w3-margin-right
-            | hostel
-          button.w3-bar-item.w3-button.tablink(onclick="openLink(event, 'Car');")
-            i.fa.fa-car.w3-margin-right
-            | Rental
-        // Tabs
-        #Flight.w3-container.w3-white.w3-padding-16.myLink
-          h3 Find Best Hostel !
-          .w3-row-padding(style='margin:0 -16px;')
-            .w3-half
-              label Location
-              input.w3-input.w3-border(placeholder='Universrity Name', type='text')
-          p
-            button.w3-button.w3-dark-grey Search and find
-        #hostel.w3-container.w3-white.w3-padding-16.myLink
-          h3 Find the best hostels
-          p Book a hostels with us and get the best fares and promotions.
-          p We know hostels - we know comfort.
-          p
-            button.w3-button.w3-dark-grey Search Hostels
-        #Car.w3-container.w3-white.w3-padding-16.myLink
-          p
-            span.w3-tag.w3-deep-orange DISCOUNT!
-            |  Special offer if you book today: 25% off anywhere in the world with CarServiceRentalRUs
-          input.w3-input.w3-border(placeholder='Pick-up point', type='text')
-          p
-            button.w3-button.w3-dark-grey Search Availability
-    // Page content
-    .w3-content(style='max-width:1100px;')
-      // Good offers
-      .w3-container.w3-margin-top
-        h3 Good Offers Right Now
-        h6
-          | Up to
-          strong 50%
-          |  discount.
-      .w3-row-padding.w3-text-white.w3-large
-        .w3-half.w3-margin-bottom
-          .w3-display-container
-            img(src='https://www.w3schools.com/w3images/cinqueterre.jpg', alt='Cinque Terre', style='width:100%')
-            span.w3-display-bottomleft.w3-padding Cinque Terre
-        .w3-half
-          .w3-row-padding(style='margin:0 -16px')
-            .w3-half.w3-margin-bottom
-              .w3-display-container
-                img(src='https://www.w3schools.com/w3images/newyork2.jfg', alt='New York', style='width:100%')
-                span.w3-display-bottomleft.w3-padding New York
-            .w3-half.w3-margin-bottom
-              .w3-display-container
-                img(src='https://www.w3schools.com/w3images/sanfran.jpg', alt='San Francisco', style='width:100%')
-                span.w3-display-bottomleft.w3-padding San Francisco
-          .w3-row-padding(style='margin:0 -16px')
-            .w3-half.w3-margin-bottom
-              .w3-display-container
-                img(src='https://www.w3schools.com/w3images/pisa.jpg', alt='Pisa', style='width:100%')
-                span.w3-display-bottomleft.w3-padding Pisa
-            .w3-half.w3-margin-bottom
-              .w3-display-container
-                img(src='https://www.w3schools.com/w3images/paris.jpg', alt='Paris', style='width:100%')
-                span.w3-display-bottomleft.w3-padding Paris
-      // Explore Nature
-      .w3-container
-        h3 Explore Nature
-        p Travel with us and see nature at its finest.
-      .w3-row-padding
-        .w3-half.w3-margin-bottom
-          img(src='https://www.w3schools.com/w3images/ocean2.jpg', alt='Norway', style='width:100%')
-          .w3-container.w3-white
-            h3 West Coast, Norway
-            p.w3-opacity Roundtrip from $79
-            p Praesent tincidunt sed tellus ut rutrum sed vitae justo.
-            button.w3-button.w3-margin-bottom Buy Tickets
-        .w3-half.w3-margin-bottom
-          img(src='https://www.w3schools.com/w3images/mountains2.jpg', alt='Austria', style='width:100%')
-          .w3-container.w3-white
-            h3 Mountains, Austria
-            p.w3-opacity One-way from $39
-            p Praesent tincidunt sed tellus ut rutrum sed vitae justo.
-            button.w3-button.w3-margin-bottom Buy Tickets
-      // Newsletter
-      .w3-container
-        .w3-panel.w3-padding-16.w3-black.w3-opacity.w3-card.w3-hover-opacity-off
-          h2 Get the best offers first!
-          p Join our newsletter.
-          label E-mail
-          input.w3-input.w3-border(placeholder='Your Email address', type='text')
-          button.w3-button.w3-red.w3-margin-top(type='button') Subscribe
-      // Contact
-      .w3-container
-        h2 Contact
-        p Let us book your next trip!
-        i.fa.fa-map-marker(style='width:30px')
-        |  Chicago, US
-        br
-        i.fa.fa-phone(style='width:30px')
-        |  Phone: +00 151515
-        br
-        i.fa.fa-envelope(style='width:30px')
-        |  Email: mail@mail.com
-        br
-        form(action='/action_page.php', target='_blank')
-          p
-            input.w3-input.w3-padding-16.w3-border(placeholder='Name', required='', name='Name', type='text')
-          p
-            input.w3-input.w3-padding-16.w3-border(placeholder='Email', required='', name='Email', type='text')
-          p
-            input.w3-input.w3-padding-16.w3-border(placeholder='Message', required='', name='Message', type='text')
-          p
-            button.w3-button.w3-black.w3-padding-large(type='submit') SEND MESSAGE
-      // End page content
-      // Footer
-      footer.w3-container.w3-center.w3-opacity.w3-margin-bottom
-        h5 Find Us On
-        .w3-xlarge.w3-padding-16
-          i.fa.fa-facebook-official.w3-hover-opacity
-          i.fa.fa-instagram.w3-hover-opacity
-          i.fa.fa-snapchat.w3-hover-opacity
-          i.fa.fa-pinterest-p.w3-hover-opacity
-          i.fa.fa-twitter.w3-hover-opacity
-          i.fa.fa-linkedin.w3-hover-opacity
-        p
-          | Powered by
-          a.w3-hover-text-green(href='github.com/MSZ991', target='_blank') MSZ991
-      script.
-        // Tabs
-        function openLink(evt, linkName) {
-        var i, x, tablinks;
-        x = document.getElementsByClassName("myLink");
-        for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablink");
-        for (i = 0; i < x.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
-        }
-        document.getElementById(linkName).style.display = "block";
-        evt.currentTarget.className += " w3-red";
-        }
-        // Click on the first tablink on load
-        document.getElementsByClassName("tablink")[0].click();
+    meta(http-equiv="content-type", content="text/html;charset=UTF-8")
+    //if IE
+      meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    |       
+    meta(name="description", content="")
+    |       
+    meta(name="author", content="ScriptsBundle")
+    |       
+    title Hostlyte| Largest Hostel Classified Portal
+    // =-=-=-=-=-=-= Favicons Icon =-=-=-=-=-=-=
+    link(rel="icon", href="images/favicon.ico", type="image/x-icon")
+    // =-=-=-=-=-=-= Mobile Specific =-=-=-=-=-=-=
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+    // =-=-=-=-=-=-= Bootstrap CSS Style =-=-=-=-=-=-=
+    link(rel="stylesheet", href="css/bootstrap.css")
+    // =-=-=-=-=-=-= Template CSS Style =-=-=-=-=-=-=
+    link(rel="stylesheet", href="css/style.css")
+    // =-=-=-=-=-=-= Font Awesome =-=-=-=-=-=-=
+    link(rel="stylesheet", href="css/font-awesome.css", type="text/css")
+    // =-=-=-=-=-=-= Flat Icon =-=-=-=-=-=-=
+    link(href="css/flaticon.css", rel="stylesheet")
+    // =-=-=-=-=-=-= Et Line Fonts =-=-=-=-=-=-=
+    link(rel="stylesheet", href="css/et-line-fonts.css", type="text/css")
+    // =-=-=-=-=-=-= Menu Drop Down =-=-=-=-=-=-=
+    link(rel="stylesheet", href="css/forest-menu.css", type="text/css")
+    // =-=-=-=-=-=-= Animation =-=-=-=-=-=-=
+    link(rel="stylesheet", href="css/animate.min.css", type="text/css")
+    // =-=-=-=-=-=-= Select Options =-=-=-=-=-=-=
+    link(href="css/select2.min.css", rel="stylesheet")
+    // =-=-=-=-=-=-= noUiSlider =-=-=-=-=-=-=
+    link(href="css/nouislider.min.css", rel="stylesheet")
+    // =-=-=-=-=-=-= Listing Slider =-=-=-=-=-=-=
+    link(href="css/slider.css", rel="stylesheet")
+    // =-=-=-=-=-=-= Owl carousel =-=-=-=-=-=-=
+    link(rel="stylesheet", type="text/css", href="css/owl.carousel.css")
+    |       
+    link(rel="stylesheet", type="text/css", href="css/owl.theme.css")
+    // =-=-=-=-=-=-= Check boxes =-=-=-=-=-=-=
+    link(href="skins/minimal/minimal.css", rel="stylesheet")
+    // =-=-=-=-=-=-= Responsive Media =-=-=-=-=-=-=
+    link(href="css/responsive-media.css", rel="stylesheet")
+    // =-=-=-=-=-=-= Template Color =-=-=-=-=-=-=
+    link#color(rel="stylesheet", href="css/colors/defualt.css")
+    // =-=-=-=-=-=-= For Style Switcher =-=-=-=-=-=-=
+    link#theme-color(rel="stylesheet", type="text/css", href="#")
+    // =-=-=-=-=-=-= Check boxes =-=-=-=-=-=-=
+    link(href="skins/minimal/minimal.css", rel="stylesheet")
+    // JavaScripts
+    script(src="js/modernizr.js")
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js")
+      |       
+      script(src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js")
+  |    
+  body
+    // =-=-=-=-=-=-= Preloader =-=-=-=-=-=-=
+    #loader-wrapper
+      #loader
+      |          
+      .loader-section.section-left
+      |          
+      .loader-section.section-right
+    // =-=-=-=-=-=-= Light Header =-=-=-=-=-=-=
+    .colored-header
+      // Top Bar
+      .header-top
+        .container
+          .row
+            // Header Top Left
+            .header-top-left.col-md-8.col-sm-6.col-xs-12.hidden-xs
+              ul.listnone
+                li
+                  a(href="about")
+                    i.fa.fa-heart-o(aria-hidden="true")
+                    |  About
+                |                         
+                li
+                  a(href="faqs")
+                    i.fa.fa-folder-open-o(aria-hidden="true")
+                    |  FAQS
+            // Header Top Right Social
+            .header-right.col-md-4.col-sm-6.col-xs-12
+              .pull-right
+                ul.listnone
+                  li
+                    a(href="loginl")
+                      i.fa.fa-sign-in
+                      |  Log in
+                  |                            
+                  li
+                    a(href="register")
+                      i.fa.fa-unlock(aria-hidden="true")
+                      |  Register
+      // Top Bar End
+      // Navigation Menu
+      nav#menu-1.mega-menu
+        // menu list items container
+        section.menu-list-items
+          .container
+            .row
+              .col-lg-12.col-md-12
+                // menu logo
+                ul.menu-logo
+                  li
+                    a(href="/")
+                      img(src="images/logo21.png", alt="HOSTLYTE")
+                // menu links
+                ul.menu-links
+                  // active class
+                  li
+                    a(href="/")
+                      | Home 
+                      i
+                  |                               
+                  li
+                    a(href="/")
+                      | Listing 
+                      i
+                  |                               
+                  li
+                    a(href="/")
+                      | Categories 
+                      i
+                  |                               
+                  li
+                    a(href="contact") Contact 
+                |                            
+                ul.menu-search-bar
+                  li
+                    a.btn.btn-light(href="postad")
+                      i.fa.fa-plus(aria-hidden="true")
+                      |  Post Free Ad
+    // Navigation Menu End
+    // =-=-=-=-=-=-= Transparent Header =-=-=-=-=-=-=
+    // =-=-=-=-=-=-= Home Banner 2 =-=-=-=-=-=-=
+    #banner
+      .container
+        .search-container
+          // Form
+          h2 What are you looking for ?
+          |                
+          form
+            // Search Input
+            .col-md-4.col-sm-6.col-xs-12.no-padding
+              .form-group
+                input.form-control.banner-icon-search(type="text", name="keyword", placeholder="Nadeem Hostel...", value="")
+            // Search Category
+            .col-md-3.col-sm-6.col-xs-12.no-padding
+              .form-group
+                select.category.form-control
+                  option(label="Select Category")
+                  |                            
+                  option(value="0") Boys Hostel 
+                  |                            
+                  option(value="1") Girls Hostel
+            // Search Location
+            .col-md-3.col-sm-9.col-xs-12.no-padding
+              .form-group
+                select.cities.form-control
+                  option(value="0") FAST 
+                  |                            
+                  option(value="1") LUMS
+                  |                            
+                  option(value="2") UMT
+                  |                            
+                  option(value="3") UOL
+                  |                            
+                  option(value="4") COMSATS
+                  |                            
+                  option(value="5") ITU
+            |                   
+            .col-md-2.col-sm-3.col-xs-12.no-padding
+              .form-group.form-action
+                button.btn.btn-theme.btn-search-submit(type="button") Search
+    // =-=-=-=-=-=-= Home Banner 2 End =-=-=-=-=-=-=
+    // =-=-=-=-=-=-= Popular Categories End =-=-=-=-=-=-=
+    // =-=-=-=-=-=-= Featured Ads =-=-=-=-=-=-=
+    section.custom-padding
+      // Main Container
+      .container
+        // Row
+        .row
+          // Heading Area
+          .heading-panel
+            .col-xs-12.col-md-12.col-sm-12.text-center
+              // Main Title
+              h1
+                | Browse 
+                span.heading-color  Featured
+                |  Ads
+              // Short Description
+              p.heading-text DESCRIPTOON DAAAALOOOOO
+          // Middle Content Box
+          .col-md-12.col-xs-12.col-sm-12
+            .row
+              .featured-slider.owl-carousel.owl-theme
+                .item
+                  .col-md-12.col-xs-12.col-sm-12.clearfix
+                    // Ad Box
+                    .category-grid-box
+                      // Ad Img
+                      .category-grid-img
+                        img.img-responsive(alt="", src="images/posting/car-3.jpg")
+                        // User Review
+                        .user-preview
+                          a(href="#")
+                            img.avatar.avatar-small(src="images/users/1.jpg", alt="")
+                        // View Details
+                        a.view-details(href="") View Details
+                        // Additional Info
+                        .additional-information
+                          p  4 Persons
+                          |                                           
+                          p  Wifi 
+                          |                                           
+                          p  Separate Bathroom 
+                        // Additional Info End
+                      // Ad Img End
+                      .short-description
+                        // Ad Category
+                        .category-title
+                          span
+                            a(href="#") Boys Hostel
+                        // Ad Title
+                        h3
+                          a(title="", href="single-page-listing.html") Nadeem boys hostel
+                        // Price
+                        .price Rs 7000 
+                      // Addition Info
+                      .ad-info
+                        ul
+                          li
+                            i.fa.fa-map-marker
+                            | FAST
+                          |                                           
+                          li
+                            i.fa.fa-clock-o
+                            |  16 minutes ago
+                    // Ad Box End
+                |                            
+                .item
+                  .col-md-12.col-xs-12.col-sm-12.clearfix
+                    // Ad Box
+                    .category-grid-box
+                      // Ad Img
+                      .category-grid-img
+                        img.img-responsive(alt="", src="images/posting/car-3.jpg")
+                        // User Review
+                        .user-preview
+                          a(href="#")
+                            img.avatar.avatar-small(src="images/users/1.jpg", alt="")
+                        // View Details
+                        a.view-details(href="") View Details
+                        // Additional Info
+                        .additional-information
+                          p  4 Persons
+                          |                                           
+                          p  Wifi 
+                          |                                           
+                          p  Separate Bathroom 
+                        // Additional Info End
+                      // Ad Img End
+                      .short-description
+                        // Ad Category
+                        .category-title
+                          span
+                            a(href="#") Boys Hostel
+                        // Ad Title
+                        h3
+                          a(title="", href="single-page-listing.html") Nadeem boys hostel
+                        // Price
+                        .price Rs 7000 
+                      // Addition Info
+                      .ad-info
+                        ul
+                          li
+                            i.fa.fa-map-marker
+                            | FAST
+                          |                                           
+                          li
+                            i.fa.fa-clock-o
+                            |  16 minutes ago
+                    // Ad Box End
+                |                            
+                .item
+                  .col-md-12.col-xs-12.col-sm-12.clearfix
+                    // Ad Box
+                    .category-grid-box
+                      // Ad Img
+                      .category-grid-img
+                        img.img-responsive(alt="", src="images/posting/car-3.jpg")
+                        // User Review
+                        .user-preview
+                          a(href="#")
+                            img.avatar.avatar-small(src="images/users/1.jpg", alt="")
+                        // View Details
+                        a.view-details(href="") View Details
+                        // Additional Info
+                        .additional-information
+                          p  4 Persons
+                          |                                           
+                          p  Wifi 
+                          |                                           
+                          p  Separate Bathroom 
+                        // Additional Info End
+                      // Ad Img End
+                      .short-description
+                        // Ad Category
+                        .category-title
+                          span
+                            a(href="#") Boys Hostel
+                        // Ad Title
+                        h3
+                          a(title="", href="single-page-listing.html") Nadeem boys hostel
+                        // Price
+                        .price Rs 7000 
+                      // Addition Info
+                      .ad-info
+                        ul
+                          li
+                            i.fa.fa-map-marker
+                            | FAST
+                          |                                           
+                          li
+                            i.fa.fa-clock-o
+                            |  16 minutes ago
+                    // Ad Box End
+                |                            
+                .item
+                  .col-md-12.col-xs-12.col-sm-12.clearfix
+                    // Ad Box
+                    .category-grid-box
+                      // Ad Img
+                      .category-grid-img
+                        img.img-responsive(alt="", src="images/posting/car-3.jpg")
+                        // User Review
+                        .user-preview
+                          a(href="#")
+                            img.avatar.avatar-small(src="images/users/1.jpg", alt="")
+                        // View Details
+                        a.view-details(href="") View Details
+                        // Additional Info
+                        .additional-information
+                          p  4 Persons
+                          |                                           
+                          p  Wifi 
+                          |                                           
+                          p  Separate Bathroom 
+                        // Additional Info End
+                      // Ad Img End
+                      .short-description
+                        // Ad Category
+                        .category-title
+                          span
+                            a(href="#") Boys Hostel
+                        // Ad Title
+                        h3
+                          a(title="", href="single-page-listing.html") Nadeem boys hostel
+                        // Price
+                        .price Rs 7000 
+                      // Addition Info
+                      .ad-info
+                        ul
+                          li
+                            i.fa.fa-map-marker
+                            | FAST
+                          |                                           
+                          li
+                            i.fa.fa-clock-o
+                            |  16 minutes ago
+                    // Ad Box End
+                |                            
+                .item
+                  .col-md-12.col-xs-12.col-sm-12.clearfix
+                    // Ad Box
+                    .category-grid-box
+                      // Ad Img
+                      .category-grid-img
+                        img.img-responsive(alt="", src="images/posting/car-3.jpg")
+                        // User Review
+                        .user-preview
+                          a(href="#")
+                            img.avatar.avatar-small(src="images/users/1.jpg", alt="")
+                        // View Details
+                        a.view-details(href="") View Details
+                        // Additional Info
+                        .additional-information
+                          p  4 Persons
+                          |                                           
+                          p  Wifi 
+                          |                                           
+                          p  Separate Bathroom 
+                        // Additional Info End
+                      // Ad Img End
+                      .short-description
+                        // Ad Category
+                        .category-title
+                          span
+                            a(href="#") Boys Hostel
+                        // Ad Title
+                        h3
+                          a(title="", href="single-page-listing.html") Nadeem boys hostel
+                        // Price
+                        .price Rs 7000 
+                      // Addition Info
+                      .ad-info
+                        ul
+                          li
+                            i.fa.fa-map-marker
+                            | FAST
+                          |                                           
+                          li
+                            i.fa.fa-clock-o
+                            |  16 minutes ago
+                    // Ad Box End
+                |                            
+                .item
+                  .col-md-12.col-xs-12.col-sm-12.clearfix
+                    // Ad Box
+                    .category-grid-box
+                      // Ad Img
+                      .category-grid-img
+                        img.img-responsive(alt="", src="images/posting/car-3.jpg")
+                        // User Review
+                        .user-preview
+                          a(href="#")
+                            img.avatar.avatar-small(src="images/users/1.jpg", alt="")
+                        // View Details
+                        a.view-details(href="") View Details
+                        // Additional Info
+                        .additional-information
+                          p  4 Persons
+                          |                                           
+                          p  Wifi 
+                          |                                           
+                          p  Separate Bathroom 
+                        // Additional Info End
+                      // Ad Img End
+                      .short-description
+                        // Ad Category
+                        .category-title
+                          span
+                            a(href="#") Boys Hostel
+                        // Ad Title
+                        h3
+                          a(title="", href="single-page-listing.html") Nadeem boys hostel
+                        // Price
+                        .price Rs 7000 
+                      // Addition Info
+                      .ad-info
+                        ul
+                          li
+                            i.fa.fa-map-marker
+                            | FAST
+                          |                                           
+                          li
+                            i.fa.fa-clock-o
+                            |  16 minutes ago
+                    // Ad Box End
+                |                            
+                .item
+                  .col-md-12.col-xs-12.col-sm-12.clearfix
+                    // Ad Box
+                    .category-grid-box
+                      // Ad Img
+                      .category-grid-img
+                        img.img-responsive(alt="", src="images/posting/car-3.jpg")
+                        // User Review
+                        .user-preview
+                          a(href="#")
+                            img.avatar.avatar-small(src="images/users/1.jpg", alt="")
+                        // View Details
+                        a.view-details(href="") View Details
+                        // Additional Info
+                        .additional-information
+                          p  4 Persons
+                          |                                           
+                          p  Wifi 
+                          |                                           
+                          p  Separate Bathroom 
+                        // Additional Info End
+                      // Ad Img End
+                      .short-description
+                        // Ad Category
+                        .category-title
+                          span
+                            a(href="#") Boys Hostel
+                        // Ad Title
+                        h3
+                          a(title="", href="single-page-listing.html") Nadeem boys hostel
+                        // Price
+                        .price Rs 7000 
+                      // Addition Info
+                      .ad-info
+                        ul
+                          li
+                            i.fa.fa-map-marker
+                            | FAST
+                          |                                           
+                          li
+                            i.fa.fa-clock-o
+                            |  16 minutes ago
+                    // Ad Box End
+                |                            
+                .item
+                  .col-md-12.col-xs-12.col-sm-12.clearfix
+                    // Ad Box
+                    .category-grid-box
+                      // Ad Img
+                      .category-grid-img
+                        img.img-responsive(alt="", src="images/posting/car-3.jpg")
+                        // User Review
+                        .user-preview
+                          a(href="#")
+                            img.avatar.avatar-small(src="images/users/1.jpg", alt="")
+                        // View Details
+                        a.view-details(href="") View Details
+                        // Additional Info
+                        .additional-information
+                          p  4 Persons
+                          |                                           
+                          p  Wifi 
+                          |                                           
+                          p  Separate Bathroom 
+                        // Additional Info End
+                      // Ad Img End
+                      .short-description
+                        // Ad Category
+                        .category-title
+                          span
+                            a(href="#") Boys Hostel
+                        // Ad Title
+                        h3
+                          a(title="", href="single-page-listing.html") Nadeem boys hostel
+                        // Price
+                        .price Rs 7000 
+                      // Addition Info
+                      .ad-info
+                        ul
+                          li
+                            i.fa.fa-map-marker
+                            | FAST
+                          |                                           
+                          li
+                            i.fa.fa-clock-o
+                            |  16 minutes ago
+                    // Ad Box End
+                |                            
+                .item
+                  .col-md-12.col-xs-12.col-sm-12.clearfix
+                    // Ad Box
+                    .category-grid-box
+                      // Ad Img
+                      .category-grid-img
+                        img.img-responsive(alt="", src="images/posting/car-3.jpg")
+                        // User Review
+                        .user-preview
+                          a(href="#")
+                            img.avatar.avatar-small(src="images/users/1.jpg", alt="")
+                        // View Details
+                        a.view-details(href="") View Details
+                        // Additional Info
+                        .additional-information
+                          p  4 Persons
+                          |                                           
+                          p  Wifi 
+                          |                                           
+                          p  Separate Bathroom 
+                        // Additional Info End
+                      // Ad Img End
+                      .short-description
+                        // Ad Category
+                        .category-title
+                          span
+                            a(href="#") Boys Hostel
+                        // Ad Title
+                        h3
+                          a(title="", href="single-page-listing.html") Nadeem boys hostel
+                        // Price
+                        .price Rs 7000 
+                      // Addition Info
+                      .ad-info
+                        ul
+                          li
+                            i.fa.fa-map-marker
+                            | FAST
+                          |                                           
+                          li
+                            i.fa.fa-clock-o
+                            |  16 minutes ago
+                    // Ad Box End
+          // Middle Content Box End
+        // Row End
+      // Main Container End
+    // =-=-=-=-=-=-= Featured Ads End =-=-=-=-=-=-=
+    // =-=-=-=-=-=-= Trending Ads =-=-=-=-=-=-=
+    section.custom-padding.gray
+      // Main Container
+      .container
+        // Row
+        .row
+          // Heading Area
+          .heading-panel
+            .col-xs-12.col-md-12.col-sm-12.text-center
+              // Main Title
+              h1
+                | Latest 
+                span.heading-color  Trending
+                |  Ads
+              // Short Description
+              p.heading-text DESCRIPTION DAALOO
+          // Middle Content Box
+          .col-md-12.col-xs-12.col-sm-12
+            ul.list-unstyled
+              // Listing Grid
+              li
+                .well.ad-listing.clearfix
+                  .col-md-3.col-sm-5.col-xs-12.grid-style.no-padding
+                    // Image Box
+                    .img-box
+                      img.img-responsive(src="images/posting/car-4.jpg", alt="")
+                      |                                     
+                      .total-images
+                        strong 8
+                        |  photos
+                      |                                     
+                      .quick-view
+                        a.view-button(href="#ad-preview", data-toggle="modal")
+                          i.fa.fa-search
+                    // Ad Status
+                    span.ad-status  Featured 
+                    // User Preview
+                    .user-preview
+                      a(href="#")
+                        img.avatar.avatar-small(src="images/users/2.jpg", alt="")
+                  |                               
+                  .col-md-9.col-sm-7.col-xs-12
+                    // Ad Content
+                    .row
+                      .content-area
+                        .col-md-9.col-sm-12.col-xs-12
+                          // Category Title
+                          .category-title
+                            span
+                              a(href="#") GIRLS HOSTEL
+                          // Ad Title
+                          h3
+                            a  CHACHA's HOSTEL
+                          // Info Icons
+                          ul.additional-info.pull-right
+                            li
+                              a.fa.fa-envelope(data-toggle="tooltip", title="Send Message", href="#")
+                            |                                              
+                            li
+                              a.fa.fa-phone(data-toggle="tooltip", title="+92-4567-123", href="#")
+                            |                                              
+                            li
+                              a.fa.fa-heart(data-toggle="tooltip", title="Bookmark", href="#")
+                          // Ad Meta Info
+                          ul.ad-meta-info
+                            li
+                              i.fa.fa-map-marker
+                              a(href="#") FAST
+                            |                                              
+                            li
+                              i.fa.fa-clock-o
+                              | 2 Months
+                          // Ad Description
+                          .ad-details
+                            p DESCRIPTION IN HEAVY ENGLISH
+                        |                                        
+                        .col-md-3.col-xs-12.col-sm-12
+                          // Ad Stats
+                          .short-info
+                            .ad-stats.hidden-xs
+                              span Condition  : 
+                              |  8/10
+                            |                                             
+                            .ad-stats.hidden-xs
+                              span Wifi 
+                              |  Available
+                          // Price
+                          .price
+                            span  Rs 8,640
+                          // Ad View Button
+                          button.btn.btn-block.btn-success
+                            i.fa.fa-eye(aria-hidden="true")
+                            |  View Ad.
+                    // Ad Content End
+              // Listing Grid
+              li
+                .well.ad-listing.clearfix
+                  .col-md-3.col-sm-5.col-xs-12.grid-style.no-padding
+                    // Image Box
+                    .img-box
+                      img.img-responsive(src="images/posting/list-2.jpg", alt="")
+                      |                                     
+                      .total-images
+                        strong 4
+                        |  photos
+                      |                                     
+                      .quick-view
+                        a.view-button(href="#ad-preview", data-toggle="modal")
+                          i.fa.fa-search
+                    // Ad Status
+                    span.ad-status  Featured 
+                    // User Preview
+                    .user-preview
+                      a(href="#")
+                        img.avatar.avatar-small(src="images/users/6.jpg", alt="")
+                  |                               
+                  .col-md-9.col-sm-7.col-xs-12
+                    // Ad Content
+                    .row
+                      .content-area
+                        .col-md-9.col-sm-12.col-xs-12
+                          // Category Title
+                          .category-title
+                            span
+                              a(href="#") GIRLS HOSTEL
+                          // Ad Title
+                          h3
+                            a  CHACHA's HOSTEL
+                          // Info Icons
+                          ul.additional-info.pull-right
+                            li
+                              a.fa.fa-envelope(data-toggle="tooltip", title="Send Message", href="#")
+                            |                                              
+                            li
+                              a.fa.fa-phone(data-toggle="tooltip", title="+92-4567-123", href="#")
+                            |                                              
+                            li
+                              a.fa.fa-heart(data-toggle="tooltip", title="Bookmark", href="#")
+                          // Ad Meta Info
+                          ul.ad-meta-info
+                            li
+                              i.fa.fa-map-marker
+                              a(href="#") FAST
+                            |                                              
+                            li
+                              i.fa.fa-clock-o
+                              | 2 Months
+                          // Ad Description
+                          .ad-details
+                            p DESCRIPTION IN HEAVY ENGLISH
+                        |                                        
+                        .col-md-3.col-xs-12.col-sm-12
+                          // Ad Stats
+                          .short-info
+                            .ad-stats.hidden-xs
+                              span Condition  : 
+                              |  8/10
+                            |                                             
+                            .ad-stats.hidden-xs
+                              span Wifi 
+                              |  Available
+                          // Price
+                          .price
+                            span  Rs 8,640
+                          // Ad View Button
+                          button.btn.btn-block.btn-success
+                            i.fa.fa-eye(aria-hidden="true")
+                            |  View Ad.
+                    // Ad Content End
+              // Listing Grid
+              li
+                .well.ad-listing.clearfix
+                  .col-md-3.col-sm-5.col-xs-12.grid-style.no-padding
+                    // Image Box
+                    .img-box
+                      img.img-responsive(src="images/posting/12.jpg", alt="")
+                      |                                     
+                      .total-images
+                        strong 5
+                        |  photos
+                      |                                     
+                      .quick-view
+                        a.view-button(href="#ad-preview", data-toggle="modal")
+                          i.fa.fa-search
+                    // User Preview
+                    .user-preview
+                      a(href="#")
+                        img.avatar.avatar-small(src="images/users/5.jpg", alt="")
+                  |                               
+                  .col-md-9.col-sm-7.col-xs-12
+                    // Ad Content
+                    .row
+                      .content-area
+                        .col-md-9.col-sm-12.col-xs-12
+                          // Category Title
+                          .category-title
+                            span
+                              a(href="#") GIRLS HOSTEL
+                          // Ad Title
+                          h3
+                            a  CHACHA's HOSTEL
+                          // Info Icons
+                          ul.additional-info.pull-right
+                            li
+                              a.fa.fa-envelope(data-toggle="tooltip", title="Send Message", href="#")
+                            |                                              
+                            li
+                              a.fa.fa-phone(data-toggle="tooltip", title="+92-4567-123", href="#")
+                            |                                              
+                            li
+                              a.fa.fa-heart(data-toggle="tooltip", title="Bookmark", href="#")
+                          // Ad Meta Info
+                          ul.ad-meta-info
+                            li
+                              i.fa.fa-map-marker
+                              a(href="#") FAST
+                            |                                              
+                            li
+                              i.fa.fa-clock-o
+                              | 2 Months
+                          // Ad Description
+                          .ad-details
+                            p DESCRIPTION IN HEAVY ENGLISH
+                        |                                        
+                        .col-md-3.col-xs-12.col-sm-12
+                          // Ad Stats
+                          .short-info
+                            .ad-stats.hidden-xs
+                              span Condition  : 
+                              |  8/10
+                            |                                             
+                            .ad-stats.hidden-xs
+                              span Wifi 
+                              |  Available
+                          // Price
+                          .price
+                            span  Rs 8,640
+                          // Ad View Button
+                          button.btn.btn-block.btn-success
+                            i.fa.fa-eye(aria-hidden="true")
+                            |  View Ad.
+                    // Ad Content End
+              // Listing Grid
+              li
+                .well.ad-listing.clearfix
+                  .col-md-3.col-sm-5.col-xs-12.grid-style.no-padding
+                    // Image Box
+                    .img-box
+                      img.img-responsive(src="images/posting/lap-4.jpg", alt="")
+                      |                                     
+                      .total-images
+                        strong 3
+                        |  photos
+                      |                                     
+                      .quick-view
+                        a.view-button(href="#ad-preview", data-toggle="modal")
+                          i.fa.fa-search
+                    // User Preview
+                    .user-preview
+                      a(href="#")
+                        img.avatar.avatar-small(src="images/users/3.jpg", alt="")
+                  |                               
+                  .col-md-9.col-sm-7.col-xs-12
+                    // Ad Content
+                    .row
+                      .content-area
+                        .col-md-9.col-sm-12.col-xs-12
+                          // Category Title
+                          .category-title
+                            span
+                              a(href="#") GIRLS HOSTEL
+                          // Ad Title
+                          h3
+                            a  CHACHA's HOSTEL
+                          // Info Icons
+                          ul.additional-info.pull-right
+                            li
+                              a.fa.fa-envelope(data-toggle="tooltip", title="Send Message", href="#")
+                            |                                              
+                            li
+                              a.fa.fa-phone(data-toggle="tooltip", title="+92-4567-123", href="#")
+                            |                                              
+                            li
+                              a.fa.fa-heart(data-toggle="tooltip", title="Bookmark", href="#")
+                          // Ad Meta Info
+                          ul.ad-meta-info
+                            li
+                              i.fa.fa-map-marker
+                              a(href="#") FAST
+                            |                                              
+                            li
+                              i.fa.fa-clock-o
+                              | 2 Months
+                          // Ad Description
+                          .ad-details
+                            p DESCRIPTION IN HEAVY ENGLISH
+                        |                                        
+                        .col-md-3.col-xs-12.col-sm-12
+                          // Ad Stats
+                          .short-info
+                            .ad-stats.hidden-xs
+                              span Condition  : 
+                              |  8/10
+                            |                                             
+                            .ad-stats.hidden-xs
+                              span Wifi 
+                              |  Available
+                          // Price
+                          .price
+                            span  Rs 8,640
+                          // Ad View Button
+                          button.btn.btn-block.btn-success
+                            i.fa.fa-eye(aria-hidden="true")
+                            |  View Ad.
+                    // Ad Content End
+              // Listing Grid
+              li
+                .well.ad-listing.clearfix
+                  .col-md-3.col-sm-5.col-xs-12.grid-style.no-padding
+                    // Image Box
+                    .img-box
+                      img.img-responsive(src="images/posting/list-10.jpg", alt="")
+                      |                                     
+                      .total-images
+                        strong 4
+                        |  photos
+                      |                                     
+                      .quick-view
+                        a.view-button(href="#ad-preview", data-toggle="modal")
+                          i.fa.fa-search
+                    // Ad Status
+                    span.ad-status  Featured 
+                    // User Preview
+                    .user-preview
+                      a(href="#")
+                        img.avatar.avatar-small(src="images/users/4.jpg", alt="")
+                  |                               
+                  .col-md-9.col-sm-7.col-xs-12
+                    // Ad Content
+                    .row
+                      .content-area
+                        .col-md-9.col-sm-12.col-xs-12
+                          // Category Title
+                          .category-title
+                            span
+                              a(href="#") GIRLS HOSTEL
+                          // Ad Title
+                          h3
+                            a  CHACHA's HOSTEL
+                          // Info Icons
+                          ul.additional-info.pull-right
+                            li
+                              a.fa.fa-envelope(data-toggle="tooltip", title="Send Message", href="#")
+                            |                                              
+                            li
+                              a.fa.fa-phone(data-toggle="tooltip", title="+92-4567-123", href="#")
+                            |                                              
+                            li
+                              a.fa.fa-heart(data-toggle="tooltip", title="Bookmark", href="#")
+                          // Ad Meta Info
+                          ul.ad-meta-info
+                            li
+                              i.fa.fa-map-marker
+                              a(href="#") FAST
+                            |                                              
+                            li
+                              i.fa.fa-clock-o
+                              | 2 Months
+                          // Ad Description
+                          .ad-details
+                            p DESCRIPTION IN HEAVY ENGLISH
+                        |                                        
+                        .col-md-3.col-xs-12.col-sm-12
+                          // Ad Stats
+                          .short-info
+                            .ad-stats.hidden-xs
+                              span Condition  : 
+                              |  8/10
+                            |                                             
+                            .ad-stats.hidden-xs
+                              span Wifi 
+                              |  Available
+                          // Price
+                          .price
+                            span  Rs 8,640
+                          // Ad View Button
+                          button.btn.btn-block.btn-success
+                            i.fa.fa-eye(aria-hidden="true")
+                            |  View Ad.
+                    // Ad Content End
+            |                      
+            .text-center
+              ul.pagination
+                li
+                  a(href="#")
+                    i.fa.fa-chevron-left
+                |                            
+                li
+                  a(href="#") 1
+                |                            
+                li.active
+                  a(href="#") 2
+                |                            
+                li
+                  a(href="#") ...
+                |                            
+                li
+                  a(href="#") 10
+                |                            
+                li
+                  a(href="#") 20
+                |                            
+                li
+                  a(href="#")
+                    i.fa.fa-chevron-right
+          // Middle Content Box End
+        // Row End
+      // Main Container End
+    // =-=-=-=-=-=-= Trending Ads End =-=-=-=-=-=-=
+    // =-=-=-=-=-=-= Featured Ad Parallex =-=-=-=-=-=-=
+    section.parallex.bg-3.featured-ads
+      .container
+        // Container
+        .container
+          .col-md-8.col-sm-6.no-padding
+            .app-text-section
+              h5 Featured Ads
+              |                         
+              h3 Get more exposure 
+              |                         
+              ul
+                li Find nearby hostel in your network 
+                |                            
+                li Browse best hostel reviews to know why choose us
+              |                         
+              button.btn.btn-lg.btn-theme
+                | Join Us now 
+                i.fa.fa-refresh
+          |                   
+          .col-md-4.col-sm-6.no-padding
+            .pricing-fancy
+              .icon-bg
+                i.flaticon-money-2
+              |                         
+              h3
+                strong Featured
+                |  
+                span.thin Ads
+              |                         
+              .price-box
+                .price-large
+                  span.dollartext Rs
+                  |  199
+                  span.monthtext /month
+                |                            
+                p
+                  | Regulary 
+                  del Rs 500
+                |                            
+                a.btn.btn-lg.btn-theme(href="#") Submit Featured Ad
+        // Container /-
+    // =-=-=-=-=-=-= Featured Ad Parallex End =-=-=-=-=-=-=
+    // =-=-=-=-=-=-= App Download Section =-=-=-=-=-=-=
+    .app-download-section.style-2
+      // app-download-section-wrapper
+      .app-download-section-wrapper
+        // app-download-section-container
+        .app-download-section-container
+          // container
+          .container
+            // row
+            .row
+              .col-md-6.col-sm-12.col-xs-12
+                .mobile-image-content
+                  img(src="images/123.png", alt="")
+              |                         
+              .col-md-6.col-sm-12.col-xs-12
+                .app-text-section
+                  h5 Download our app
+                  |                               
+                  h3 Get Our App For Your Mobile
+                  |                               
+                  ul
+                    li Find nearby hostel in your network 
+                    |                                  
+                    li Browse real hostel reviews to know why choose us
+                  |                               
+                  .app-download-btn
+                    .row
+                      .col-md-6.col-sm-12.col-xs-12
+                        // Windows Store
+                        a.btn.app-download-button(href="#", title="Windows Store")
+                          span.app-store-btn
+                            i.fa.fa-windows
+                            |                                        
+                            span
+                              span Download From
+                              |                                        
+                              span Windows Store 
+                        // /Windows Store
+                      |                                     
+                      .col-md-6.col-sm-12.col-xs-12
+                        // Windows Store
+                        a.btn.app-download-button(href="#", title="Windows Store")
+                          span.app-store-btn
+                            i.fa.fa-apple
+                            |                                        
+                            span
+                              span Download From
+                              |  
+                              span Apple Store 
+                        // /Windows Store
+                      // Windows Store
+            // /row
+          // /container
+        // /app-download-section-container
+      // /download-section-wrapper
+    // =-=-=-=-=-=-= App Download Section End =-=-=-=-=-=-=
+    // =-=-=-=-=-=-= FOOTER =-=-=-=-=-=-=
+    .footer-top
+      .container
+        .row
+          .col-md-3.col-sm-6.col-xs-12
+            // Info Widget
+            .widget
+              .logo
+                img(alt="HOSTLYTE", src="images/logo12.png")
+              |                         
+              p DESCRIPTION DAALO
+              |                         
+              ul
+                li
+                  img(src="images/appstore.png", alt="")
+                |                            
+                li
+                  img(src="images/googleplay.png", alt="")
+            // Info Widget Exit
+          |                   
+          .col-md-3.col-sm-6.col-xs-12
+            // Follow Us
+            .widget.socail-icons
+              h5 Follow Us
+              |                         
+              ul
+                li
+                  a.fb(href="")
+                    i.fa.fa-facebook
+                  span Facebook
+                |                            
+                li
+                  a.twitter(href="")
+                    i.fa.fa-twitter
+                  span Twitter
+                |                            
+                li
+                  a.linkedin(href="")
+                    i.fa.fa-linkedin
+                  span Linkedin
+                |                            
+                li
+                  a.googleplus(href="")
+                    i.fa.fa-google-plus
+                  span Google+
+            // Follow Us End
+          |                   
+          .col-md-6.col-sm-6.col-xs-12
+            // Newslatter
+            .widget.widget-newsletter
+              h5 Singup for Weekly Newsletter
+              |                         
+              .fieldset
+                p
+                  | We may send you information about related events, webinars, products and services which we believe.
+                |                            
+                form
+                  input(value="Enter your email address", type="text")
+                  |                               
+                  input.submit-btn(name="submit", value="Submit", type="submit")
+            // Newslatter
+    // Copyrights
+    .copyrights
+      .container
+        .copyright-content
+          .row
+            .col-lg-12.col-md-12.col-sm-12.col-xs-12
+              p
+                | © 2018 Hostlyte All rights reserved. Design by 
+                a(href="github.com/msz991", target="_blank")  MSZ 
+    // =-=-=-=-=-=-= FOOTER END =-=-=-=-=-=-=
+    // Main Content Area End
+    // Post Ad Sticky
+    a.sticky-post-button(href="#")
+      span.sell-icons
+        i.flaticon-transport-9
+      |          
+      h4 SELL
+    // Back To Top
+    a.cd-top(href="#0") Top
+    // =-=-=-=-=-=-= Quote Modal =-=-=-=-=-=-=
+    .modal.fade.price-quote(tabindex="-1", role="dialog", aria-hidden="true")
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal")
+              span(aria-hidden="true") ×
+              span.sr-only Close
+            |                   
+            h3#lineModalLabel.modal-title Email for Price
+          |                
+          .modal-body
+            // content goes here
+            form
+              .form-group.col-md-6
+                label Your Name
+                |                         
+                input.form-control(type="text", placeholder="Enter Your Name")
+              |                      
+              .form-group.col-md-6
+                label Email Address
+                |                         
+                input.form-control(type="email", placeholder="Enter email")
+              |                      
+              .form-group.col-md-12
+                label Contact No
+                |                         
+                input.form-control(type="text", placeholder="Contact No")
+              |                      
+              .form-group.col-md-12
+                label Comments
+                |                         
+                textarea.form-control(placeholder="What is the price of the Honda Civic 2017 you have in your inventory?", rows="3") What is the price of the 2015 Honda Accord EX-L you have in your inventory?
+              |                      
+              .col-md-12
+                img.img-responsive(src="images/captcha.gif", alt="")
+              |                      
+              .clearfix
+              |                      
+              .col-md-12.margin-bottom-20.margin-top-20
+                button.btn.btn-theme.btn-block(type="submit") Submit
+    // Product Preview Popup
+    #ad-preview.quick-view-modal.modalopen(tabindex="-1", role="dialog", aria-hidden="true")
+      .modal-dialog.modal-lg.ad-modal
+        button.close.close-btn.popup-cls(aria-label="Close", data-dismiss="modal", type="button")
+          i.fa-times.fa
+        |             
+        .modal-content.single-product
+          .diblock
+            .col-lg-7.col-sm-12.col-xs-12
+              .clearfix
+              |                      
+              .flexslider.single-page-slider
+                .flex-viewport
+                  ul.slides.slide-main
+                    li
+                      img(alt="", src="images/single-page/1.jpg", title="")
+                    |                               
+                    li
+                      img(alt="", src="images/single-page/2.jpg", title="")
+                    |                               
+                    li.flex-active-slide
+                      img(alt="", src="images/single-page/3.jpg", title="")
+                    |                               
+                    li
+                      img(alt="", src="images/single-page/4.jpg", title="")
+                    |                               
+                    li
+                      img(alt="", src="images/single-page/5.jpg", title="")
+                    |                               
+                    li
+                      img(alt="", src="images/single-page/6.jpg", title="")
+              |                      
+              #carousels.flexslider
+                .flex-viewport
+                  ul.slides.slide-thumbnail
+                    li
+                      img(alt="", draggable="false", src="images/single-page/1_thumb.jpg")
+                    |                               
+                    li
+                      img(alt="", draggable="false", src="images/single-page/2_thumb.jpg")
+                    |                               
+                    li.flex-active-slide
+                      img(alt="", draggable="false", src="images/single-page/3_thumb.jpg")
+                    |                               
+                    li
+                      img(alt="", draggable="false", src="images/single-page/4_thumb.jpg")
+                    |                               
+                    li
+                      img(alt="", draggable="false", src="images/single-page/5_thumb.jpg")
+                    |                               
+                    li
+                      img(alt="", draggable="false", src="images/single-page/6_thumb.jpg")
+                    // items mirrored twice, total of 12
+            |                   
+            .col-sm-12.col-lg-5.col-xs-12
+              .summary.entry-summary
+                .ad-preview-details
+                  a(href="#")
+                    h4 CHACHA'S HOSTEl
+                  |                            
+                  .overview-price
+                    span RS 8,000
+                  |                            
+                  .clearfix
+                  |                            
+                  p MSZ IS GREAT 
+                  |                            
+                  ul.car-info.col-md-6.col-sm-6
+                    li
+                      span Timing
+                      |                                  
+                      p 8:00AM-8:00PM
+                    |                               
+                    li
+                      span WIFI 
+                      |                                  
+                      p Available
+                    |                               
+                    li
+                      span No of Persons
+                      |                                  
+                      p 4 
+                    |                               
+                    li
+                      span Condition
+                      |                                  
+                      p 10/10
+                  |                            
+                  button.btn.btn-theme.btn-block(type="submit") Contact Dealer
+              // .summary
+    // / Product Preview Popup
+    // =-=-=-=-=-=-= JQUERY =-=-=-=-=-=-=
+    script(src="js/jquery.min.js")
+    // Bootstrap Core Css
+    script(src="js/bootstrap.min.js")
+    // Jquery Easing
+    script(src="js/easing.js")
+    // Menu Hover
+    script(src="js/forest-megamenu.js")
+    // Jquery Appear Plugin
+    script(src="js/jquery.appear.min.js")
+    // Numbers Animation
+    script(src="js/jquery.countTo.js")
+    // Jquery Smooth Scroll
+    script(src="js/jquery.smoothscroll.js")
+    // Jquery Select Options
+    script(src="js/select2.min.js")
+    // noUiSlider
+    script(src="js/nouislider.all.min.js")
+    // Carousel Slider
+    script(src="js/carousel.min.js")
+    |       
+    script(src="js/slide.js")
+    // Image Loaded
+    script(src="js/imagesloaded.js")
+    |       
+    script(src="js/isotope.min.js")
+    // CheckBoxes
+    script(src="js/icheck.min.js")
+    // Jquery Migration
+    script(src="js/jquery-migrate.min.js")
+    // Sticky Bar
+    script(src="js/theia-sticky-sidebar.js")
+    // Style Switcher
+    script(src="js/color-switcher.js")
+    // Template Core JS
+    script(src="js/custom.js")

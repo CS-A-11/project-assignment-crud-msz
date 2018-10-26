@@ -1,35 +1,33 @@
+
+
 /* GET 'about us' page */
-module.exports.about = function(req, res) {
-  res.render("about", {
-    title: "About Hostlyte",
-    content:
-      "HOSTLYTE's description"
-  });
+module.exports.about = function(req,res)
+{
+res.render('about');
 };
 
-//Search
-module.exports.search = function(req,res){
-  res.render('search',{
-  title:'Search',
-  content:"Search Page"
-  });
+module.exports.faq = function(req,res)
+{
+res.render('faqs');
 };
 
-module.exports.contact = function(req,res){
-  res.render('search',{
-  title:'Contact',
-  content:"CONATC PAGE"
-  });
+module.exports.contact = function(req,res)
+{
+res.render('contact');
 };
-module.exports.listing = function(req,res){
-  res.render('search',{
-  title:'LISTING',
-  content:"LISTING Page"
-  });
+
+module.exports.error = function(req,res){
+  res.render('error');
 };
-module.exports.single = function(req,res){
-  res.render('search',{
-  title:'HOSTEL',
-  content:"HOSTLE Page"
-  });
+
+module.exports.postad = function(req,res){
+  res.render('postad');
+};
+
+module.exports.login = function(req,res){
+  res.render('login')
+};
+
+module.exports.register = function(req,res){
+  res.render('register')
 };

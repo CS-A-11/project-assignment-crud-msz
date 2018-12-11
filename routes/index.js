@@ -32,8 +32,8 @@ router.get('/contact',ctrlOthers.contact);
 
 router.get('/error',ctrlOthers.error);
 
-router.get('/postad',ctrlOthers.postad);
-//,ctrllogin.checkLogin,
+router.get('/postad',ctrllogin.checkLogin,ctrlOthers.postad);
+//,,
 router.get('/login',ctrlOthers.login);
 
 router.post("/login", ctrllogin.userLogin);
@@ -50,9 +50,13 @@ router.post("/register",ctrlsignUp.signUpCreate);
 
 router.post("/search",ctrlSearch.search);
 
+router.post("/contact_success",ctrlOthers.CS);
+
 router.get("/search_result",ctrlOthers.search);
 
 router.get("/error",ctrlOthers.error);
+
+router.post("/contact",ctrlOthers.contact_form);
 
 router.get('/:id', ctrlads.getById);
 

@@ -42,7 +42,7 @@ module.exports.userLogin = function(req, res) {
           // if the user isn't found in the DB, reset the session info and
           // redirect the user to the login page
           req.session.reset();
-          res.redirect('/login');
+          res.redirect('/error');
           } else {
           //  console.log(result);
           //  console.log("USERNAME IS THSIS :")

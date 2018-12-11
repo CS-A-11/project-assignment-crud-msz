@@ -20,7 +20,8 @@ module.exports.signUpCreate = function(req, res) {
     function(err, user) {
       if (err) {
         //sendJSONresponse(res, 400, err);
-        console.log(err);
+       //  console.log(err);
+       res.redirect("/error");
         return;
       } else {
         req.session.userId = user._id;

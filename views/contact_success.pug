@@ -56,8 +56,7 @@ html(lang="en")
       script(src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js")
       |       
       script(src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js")
-    |    
-
+  |    
   body
     // =-=-=-=-=-=-= Preloader =-=-=-=-=-=-=
     #loader-wrapper
@@ -136,28 +135,25 @@ html(lang="en")
                     a.btn.btn-light(href=" ")
                       i.fa.fa-plus(aria-hidden="true")
                       |  Post Free Ad
-    // Top Bar End
-    // Navigation Menu
+    // Navigation Menu End
+    // =-=-=-=-=-=-= Light Header End  =-=-=-=-=-=-=
     // =-=-=-=-=-=-= Transparent Breadcrumb =-=-=-=-=-=-=
     .page-header-area
       .container
         .row
           .col-lg-12.col-md-12.col-sm-12.col-xs-12
             .header-page
-              h1 User Sign In
+              h1 Success
     // Small Breadcrumb
     .small-breadcrumb
       .container
         .breadcrumb-link
           ul
             li
-              a(href="index.html") Home Page
+              a(href="index.html") Home
             |                   
             li
-              a(href="#") Pages
-            |                   
-            li
-              a.active(href="#") Sign In
+              a(href="") Success
     // Small Breadcrumb
     // =-=-=-=-=-=-= Transparent Breadcrumb End =-=-=-=-=-=-=
     // =-=-=-=-=-=-= Main Content Area =-=-=-=-=-=-=
@@ -169,131 +165,95 @@ html(lang="en")
           // Row
           .row
             // Middle Content Area
-            .col-md-5.col-md-push-7.col-sm-6.col-xs-12
-              // Form
-              .form-grid
-                form.submit-form(action="/login", method="post" role="form" id="Loginform")
-                  .form-group
-                    label Email
-                    |                               
-                    input.form-control(name="email", placeholder="Your Email", type="email")
-                  |                            
-                  .form-group
-                    label Password
-                    |                               
-                    input.form-control(name="password", placeholder="Your Password", type="password")
-                  |                            
-                  .form-group
-                    .row
-                      .col-xs-12
-                        .skin-minimal
-                          ul.list
-                            li
-                            
-                  |  
-                  #BadLogin
-                    p
-                      | The login information you entered does not match
-                      | an account in our records. Please try again.
-                          
-                  input.btn.btn-theme.pull-right(type="submit", value="Submit")
-              // Form
-            |                   
-            .col-md-7.col-md-pull-5.col-xs-12.col-sm-6
-              .heading-panel
-                h3.main-title.text-left
-                  | Sign In to your account
-              |                      
-              .content-info
-                .features
-                  .features-icons
-                    img(src="images/icons/chat.png", alt="img")
-                  |                            
-                  .features-text
-                    h3 User Dashboard
-                    |                               
-                    p
-                      | You can view your ads.
-                                    
-                span.arrowsign.hidden-sm.hidden-xs
-                  img(src="images/arrow.png", alt="")
+            .col-md-12.col-xs-12.col-sm-12
+              .error-container
+                .error-text Thank You!
+                |                         
+                .error-info We will reach you soon!
             // Middle Content Area  End
           // Row End
         // Main Container End
       // =-=-=-=-=-=-= Ads Archives End =-=-=-=-=-=-=
-      .footer-top
-        .container
-          .row
-            .col-md-3.col-sm-6.col-xs-12
-              // Info Widget
-              .widget
-                .logo
-                  img(alt="HOSTLYTE", src="images/logo12.png")
-                |                         
-                p DESCRIPTION DAALO
-                |                         
-                ul
-                  li
-                    img(src="images/appstore.png", alt="")
-                  |                            
-                  li
-                    img(src="images/googleplay.png", alt="")
-              // Info Widget Exit
-            |                   
-            .col-md-3.col-sm-6.col-xs-12
-              // Follow Us
-              .widget.socail-icons
-                h5 Follow Us
-                |                         
-                ul
-                  li
-                    a.fb(href="")
-                      i.fa.fa-facebook
-                    span Facebook
-                  |                            
-                  li
-                    a.twitter(href="")
-                      i.fa.fa-twitter
-                    span Twitter
-                  |                            
-                  li
-                    a.linkedin(href="")
-                      i.fa.fa-linkedin
-                    span Linkedin
-                  |                            
-                  li
-                    a.googleplus(href="")
-                      i.fa.fa-google-plus
-                    span Google+
-              // Follow Us End
-            |                   
-            .col-md-6.col-sm-6.col-xs-12
-              // Newslatter
-              .widget.widget-newsletter
-                h5 Singup for Weekly Newsletter
-                |                         
-                .fieldset
-                  p
-                    | We may send you information about related events, webinars, products and services which we believe.
-                  |                            
-                  form
-                    input(value="Enter your email address", type="text")
-                    |                               
-                    input.submit-btn(name="submit", value="Submit", type="submit")
-              // Newslatter
-      // Copyrights
-      .copyrights
-        .container
-          .copyright-content
+      // =-=-=-=-=-=-= FOOTER =-=-=-=-=-=-=
+      footer
+        // Footer Content
+        .footer-top
+          .container
             .row
-              .col-lg-12.col-md-12.col-sm-12.col-xs-12
-                p
-                  | © 2018 Hostlyte All rights reserved. Design by 
-                  a(href="github.com/msz991", target="_blank")  MSZ 
+              .col-md-3.col-sm-6.col-xs-12
+                // Info Widget
+                .widget
+                  .logo
+                    img(alt="HOSTLYTE", src="images/logo12.png")
+                  |                            
+                  p DESCRIPTION DAALO
+                  |                            
+                  ul
+                    li
+                      img(src="images/appstore.png", alt="")
+                    |                               
+                    li
+                      img(src="images/googleplay.png", alt="")
+                // Info Widget Exit
+              |                      
+              .col-md-3.col-sm-6.col-xs-12
+                // Follow Us
+                .widget.socail-icons
+                  h5 Follow Us
+                  |                            
+                  ul
+                    li
+                      a.fb(href="")
+                        i.fa.fa-facebook
+                      span Facebook
+                    |                               
+                    li
+                      a.twitter(href="")
+                        i.fa.fa-twitter
+                      span Twitter
+                    |                               
+                    li
+                      a.linkedin(href="")
+                        i.fa.fa-linkedin
+                      span Linkedin
+                    |                               
+                    li
+                      a.googleplus(href="")
+                        i.fa.fa-google-plus
+                      span Google+
+                // Follow Us End
+              |                      
+              .col-md-6.col-sm-6.col-xs-12
+                // Newslatter
+                .widget.widget-newsletter
+                  h5 Singup for Weekly Newsletter
+                  |                            
+                  .fieldset
+                    p
+                      | We may send you information about related events, webinars, products and services which we believe.
+                    |                               
+                    form
+                      input(value="Enter your email address", type="text")
+                      |                                  
+                      input.submit-btn(name="submit", value="Submit", type="submit")
+                // Newslatter
+        // Copyrights
+        .copyrights
+          .container
+            .copyright-content
+              .row
+                .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                  p
+                    | © 2018 Hostlyte All rights reserved. Design by 
+                    a(href="github.com/msz991", target="_blank")  MSZ 
       // =-=-=-=-=-=-= FOOTER END =-=-=-=-=-=-=
     // Main Content Area End
     // Post Ad Sticky
-
+    a.sticky-post-button.hidden-xs(href="#")
+      span.sell-icons
+        i.flaticon-transport-9
+      |          
+      h4 SELL
     // Back To Top
     a.cd-top(href="#0") Top
     // =-=-=-=-=-=-= JQUERY =-=-=-=-=-=-=

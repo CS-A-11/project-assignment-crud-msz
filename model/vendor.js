@@ -1,7 +1,13 @@
 var mongoose = require('mongoose');
+var User = require("./user");
+var Hostel = require("./hostel");
 
-var userSchema = mongoose.Schema({
+var vendorSchema = new mongoose.Schema({
     name: {
+        type: String,
+        required: true
+    },
+    CNIC: {
         type: String,
         required: true
     },
@@ -9,23 +15,19 @@ var userSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    Address: {
+    personal_address: {
         type: String,
         required: true
     },
-    email: {
-        type: String,
+    hostel: {
+        type: Hostel.schema,
         required: true
     },
-    password: {
-        type: String,
-        required: true
-    },
-    no_ads: {
-        type: int,
+    user: {
+        type: User.schema,
         required: true
     }
 
 });
 
-const vendor = module.exports = mongoose.model('vendor',userSchema);
+const vendor = module.exports = mongoose.model('vendor',vendorSchema);

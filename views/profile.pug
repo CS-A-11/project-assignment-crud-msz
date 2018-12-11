@@ -1,0 +1,531 @@
+html(lang='en')
+  head
+  body
+    meta(http-equiv='content-type', content='text/html;charset=UTF-8')
+    //if IE
+      meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='description', content='')
+    meta(name='author', content='ScriptsBundle')
+    title #{title}
+    // =-=-=-=-=-=-= Favicons Icon =-=-=-=-=-=-=
+    link(rel='icon', href='images/favicon.ico', type='image/x-icon')
+    // =-=-=-=-=-=-= Mobile Specific =-=-=-=-=-=-=
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    // =-=-=-=-=-=-= Bootstrap CSS Style =-=-=-=-=-=-=
+    link(rel='stylesheet', href='css/bootstrap.css')
+    // =-=-=-=-=-=-= Template CSS Style =-=-=-=-=-=-=
+    link(rel='stylesheet', href='css/style.css')
+    // =-=-=-=-=-=-= Font Awesome =-=-=-=-=-=-=
+    link(rel='stylesheet', href='css/font-awesome.css', type='text/css')
+    // =-=-=-=-=-=-= Flat Icon =-=-=-=-=-=-=
+    link(href='css/flaticon.css', rel='stylesheet')
+    // =-=-=-=-=-=-= Et Line Fonts =-=-=-=-=-=-=
+    link(rel='stylesheet', href='css/et-line-fonts.css', type='text/css')
+    // =-=-=-=-=-=-= Menu Drop Down =-=-=-=-=-=-=
+    link(rel='stylesheet', href='css/forest-menu.css', type='text/css')
+    // =-=-=-=-=-=-= Animation =-=-=-=-=-=-=
+    link(rel='stylesheet', href='css/animate.min.css', type='text/css')
+    // =-=-=-=-=-=-= Select Options =-=-=-=-=-=-=
+    link(href='css/select2.min.css', rel='stylesheet')
+    // =-=-=-=-=-=-= noUiSlider =-=-=-=-=-=-=
+    link(href='css/nouislider.min.css', rel='stylesheet')
+    // =-=-=-=-=-=-= Listing Slider =-=-=-=-=-=-=
+    link(href='css/slider.css', rel='stylesheet')
+    // =-=-=-=-=-=-= Owl carousel =-=-=-=-=-=-=
+    link(rel='stylesheet', type='text/css', href='css/owl.carousel.css')
+    link(rel='stylesheet', type='text/css', href='css/owl.theme.css')
+    // =-=-=-=-=-=-= Check boxes =-=-=-=-=-=-=
+    link(href='skins/minimal/minimal.css', rel='stylesheet')
+    // =-=-=-=-=-=-= Responsive Media =-=-=-=-=-=-=
+    link(href='css/responsive-media.css', rel='stylesheet')
+    // =-=-=-=-=-=-= Template Color =-=-=-=-=-=-=
+    link#color(rel='stylesheet', href='css/colors/defualt.css')
+    // =-=-=-=-=-=-= For Style Switcher =-=-=-=-=-=-=
+    link#theme-color(rel='stylesheet', type='text/css', href='#')
+    // =-=-=-=-=-=-= Check boxes =-=-=-=-=-=-=
+    link(href='skins/minimal/minimal.css', rel='stylesheet')
+    // JavaScripts
+    script(src='js/modernizr.js')
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+      script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+    // =-=-=-=-=-=-= Preloader =-=-=-=-=-=-=
+    #loader-wrapper
+      #loader
+      .loader-section.section-left
+      .loader-section.section-right
+    // =-=-=-=-=-=-= Light Header =-=-=-=-=-=-=
+    .colored-header
+      // Top Bar
+      .header-top
+        .container
+          .row
+            // Header Top Left
+            .header-top-left.col-md-8.col-sm-6.col-xs-12.hidden-xs
+              ul.listnone
+                li
+                  a(href='about.html')
+                    i.fa.fa-heart-o(aria-hidden='true')
+                    |  About
+                li
+                  a(href='faqs.html')
+                    i.fa.fa-folder-open-o(aria-hidden='true')
+                    |  FAQS
+            // Header Top Right Social
+            .header-right.col-md-4.col-sm-6.col-xs-12
+              .pull-right
+                ul.listnone
+                  li
+                    a(href='logout')
+                      i.fa.fa-sign-in
+                      |  Logout
+                
+      // Top Bar End
+      // Navigation Menu
+      nav#menu-1.mega-menu
+        // menu list items container
+        section.menu-list-items
+          .container
+            .row
+              .col-lg-12.col-md-12
+                // menu logo
+                ul.menu-logo
+                  li
+                    a(href='index')
+                      img(src='images/logo21.png', alt='HOSTLYTE')
+                // menu links
+                ul.menu-links
+                  // active class
+                  li
+                    a(href='javascript:void(0)')
+                      | Home 
+                      i
+                  li
+                    a(href='javascript:void(0)')
+                      | Listing 
+                      i
+                  li
+                    a(href='javascript:void(0)')
+                      | Categories 
+                      i
+                  li
+                    a(href='contact') Contact 
+                ul.menu-search-bar
+                  li
+                    a.btn.btn-light(href='postad')
+                      i.fa.fa-plus(aria-hidden='true')
+                      |  Post Free Ad
+    // Navigation Menu End
+    // =-=-=-=-=-=-= Light Header End  =-=-=-=-=-=-=
+    // Small Breadcrumb
+    .small-breadcrumb
+      .container
+        .breadcrumb-link
+          ul
+            li
+              a(href='index') Home
+            li
+              a.active(href='#') Profile
+    // Small Breadcrumb
+    // =-=-=-=-=-=-= Main Content Area =-=-=-=-=-=-=
+    .main-content-area.clearfix
+      // =-=-=-=-=-=-= Latest Ads =-=-=-=-=-=-=
+      section.section-padding.gray
+        // Main Container
+        .container
+          // Row
+          .row
+            // Middle Content Area
+            .col-md-12.col-xs-12.col-sm-12
+              section.search-result-item
+                a.image-link(href='#')
+                  img.image(alt='', src='images/users/9.jpg')
+                .search-result-item-body
+                  .row
+                    .col-md-5.col-sm-12.col-xs-12
+                      h4.search-result-item-heading
+                        a(href='#') #{result.name}
+                      p.description You logged in at: #{result.date}
+                      span.label.label-success Vendor
+                    .col-md-7.col-sm-12.col-xs-12
+                      .row.ad-history
+                        .col-md-4.col-sm-4.col-xs-12
+                          .user-stats
+                            h2  500
+                            small  Ads Listed  
+                        .col-md-4.col-sm-4.col-xs-12
+                          .user-stats
+                            h2 550
+                            small Total Listings
+                        
+              .dashboard-menu-container
+                ul
+                  li.active
+                    a(href='profile')
+                      .menu-name  Profile 
+                  li
+                    a(href='#')
+                      .menu-name My Ads
+                  li
+                    a(href='/logout')
+                      .menu-name Logout
+            // Middle Content Area  End
+            // Row End
+            br
+            .row
+              // Middle Content Area
+              .col-md-12.col-xs-12.col-sm-12
+                // Row
+                .profile-section.margin-bottom-20
+                  .profile-tabs
+                    ul.nav.nav-justified.nav-tabs
+                      li.active
+                        a(href='#profile', data-toggle='tab') Profile
+                      li
+                        a(href='#edit', data-toggle='tab') Edit Profile
+                    .tab-content
+                      #profile.profile-edit.tab-pane.fade.in.active
+                        h2.heading-md Manage your Name, ID and Email Addresses.
+                        p Below are the name and email addresses on file for your account.
+                        dl.dl-horizontal
+                          dt
+                            strong Your name 
+                          dd
+                            | #{result.name}
+                          dt
+                            strong Email Address 
+                          dd
+                            | #{result.email}
+                          dt
+                            strong Phone Number 
+                          dd
+                            | #{result.phone}
+                          dt
+                            strong You are a 
+                          dd
+                            | Vendor
+                          dt
+                            strong Address 
+                          dd
+                            | #{result.address}
+                      #edit.profile-edit.tab-pane.fade
+                        h2.heading-md Manage your Security Settings
+                        p Manage Your Account
+                        .clearfix
+                        form
+                          .row
+                            .col-md-6.col-sm-6.col-xs-12
+                              label Your Name 
+                              input.form-control.margin-bottom-20(type='text')
+                            .col-md-6.col-sm-6.col-xs-12
+                              label
+                                | Email Address 
+                                span.color-red *
+                              input.form-control.margin-bottom-20(type='text')
+                            .col-md-12.col-sm-12.col-xs-12
+                              label
+                                | Contact Number 
+                                span.color-red *
+                              input.form-control.margin-bottom-20(type='text')
+                            .col-md-6.col-sm-12.col-xs-12.margin-bottom-20
+                              label
+                                | Country 
+                                span.color-red *
+                              select.form-control
+                                option(value='0') SriLanka
+                                option(value='1') Australia
+                                option(value='2') Bahrain
+                                option(value='3') Canada
+                                option(value='4') Denmark
+                                option(value='5') Germany
+                            .col-md-6.col-sm-12.col-xs-12.margin-bottom-20
+                              label
+                                | City 
+                                span.color-red *
+                              select.form-control
+                                option(value='0') London
+                                option(value='1') Edinburgh
+                                option(value='2') Wales
+                                option(value='3') Cardiff
+                                option(value='4') Bradford
+                                option(value='5') Cambridge
+                            .col-md-12.col-sm-12.col-xs-12
+                              label
+                                | Address 
+                                span.color-red *
+                              textarea.form-control.margin-bottom-20(rows='3')
+                          .row.margin-bottom-20
+                            .form-group
+                              .col-md-9
+                                .input-group
+                                  span.input-group-btn
+                                    span.btn.btn-default.btn-file
+                                      | Browse… 
+                                      input#imgInp(type='file')
+                                  input.form-control(type='text', readonly='')
+                              .col-md-3
+                                img#img-upload.img-responsive(src='images/users/2.jpg', alt='')
+                          .clearfix
+                          .row
+                            .col-md-8.col-sm-8.col-xs-12
+                              .form-group
+                                .skin-minimal
+                                  ul.list
+                                    li
+                                      input#minimal-checkbox-7(type='checkbox')
+                                      label(for='minimal-checkbox-7')
+                                        | i agree 
+                                        a(href='#') Terms of Services
+                            .col-md-4.col-sm-4.col-xs-12.text-right
+                              
+                              input.btn.btn-theme.pull-right(type="submit", value="Submit")
+                      #payment.profile-edit.tab-pane.fade
+                        h2.heading-md Manage your Package Settings
+                        p Below are the payment options for your account.
+                        br
+                        form#sky-form.sky-form(action='#', novalidate='')
+                          // Checkout-Form
+                          dl.dl-horizontal
+                            dt
+                              strong Current Plan
+                            dd
+                              | Premium
+                            dt
+                              strong Expiration Date 
+                            dd
+                              | 2nd January 2017
+                          .row
+                            .col-sm-12.col-md-12.margin-bottom-20
+                              label
+                                | Select Plan You Want To Change
+                                span.color-red *
+                              select.form-control
+                                option(value='0') Free
+                                option(value='1') Premium
+                                option(value='2') Advanced
+                          button.btn.btn-sm.btn-default(type='button') Cancel
+                          button.btn.btn-sm.btn-theme(type='submit') Save Changes
+                          // End Checkout-Form
+                      #settings.profile-edit.tab-pane.fade
+                        h2.heading-md Manage your Notifications.
+                        p Below are the notifications you may manage.
+                        br
+                        form
+                          .skin-minimal
+                            ul.list
+                              li
+                                input#minimal-checkbox-1(type='checkbox')
+                                label(for='minimal-checkbox-1') Send me email notification when Ad is processed
+                              li
+                                input#minimal-checkbox-2(type='checkbox')
+                                label(for='minimal-checkbox-2') Send me email notification when user comment
+                              li
+                                input#minimal-checkbox-3(type='checkbox')
+                                label(for='minimal-checkbox-3') Send me email notification for the latest update
+                              li
+                                input#minimal-checkbox-4(type='checkbox')
+                                label(for='minimal-checkbox-4')  Receive our monthly newsletter
+                              li
+                                input#minimal-checkbox-5(type='checkbox')
+                                label(for='minimal-checkbox-5') Email notification
+                          .button-group.margin-top-20
+                            button.btn.btn-sm.btn-default(type='button') Reset
+                            button.btn.btn-sm.btn-theme(type='submit') Save Changes
+                // Row End
+                // Middle Content Area  End
+                // Main Container End
+                // =-=-=-=-=-=-= Ads s End =-=-=-=-=-=-=
+                // =-=-=-=-=-=-= FOOTER =-=-=-=-=-=-=
+                .footer-top
+                  .container
+                    .row
+                      .col-md-3.col-sm-6.col-xs-12
+                        // Info Widget
+                        .widget
+                          .logo
+                            img(alt='HOSTLYTE', src='images/logo12.png')
+                          p DESCRIPTION DAALO
+                          ul
+                            li
+                              img(src='images/appstore.png', alt='')
+                            li
+                              img(src='images/googleplay.png', alt='')
+                        // Info Widget Exit
+                      .col-md-3.col-sm-6.col-xs-12
+                        // Follow Us
+                        .widget.socail-icons
+                          h5 Follow Us
+                          ul
+                            li
+                              a.fb(href='')
+                                i.fa.fa-facebook
+                              span Facebook
+                            li
+                              a.twitter(href='')
+                                i.fa.fa-twitter
+                              span Twitter
+                            li
+                              a.linkedin(href='')
+                                i.fa.fa-linkedin
+                              span Linkedin
+                            li
+                              a.googleplus(href='')
+                                i.fa.fa-google-plus
+                              span Google+
+                        // Follow Us End
+                      .col-md-6.col-sm-6.col-xs-12
+                        // Newslatter
+                        .widget.widget-newsletter
+                          h5 Singup for Weekly Newsletter
+                          .fieldset
+                            p
+                              | We may send you information about related events, webinars, products and services which we believe.
+                            form
+                              input(value='Enter your email address', type='text')
+                              input.submit-btn(name='submit', value='Submit', type='submit')
+                        // Newslatter
+                        // Copyrights
+                        .copyrights
+                          .container
+                            .copyright-content
+                              .row
+                                .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                                  p
+                                    | © 2018 Hostlyte All rights reserved. Design by 
+                                    a(href='github.com/msz991', target='_blank')  MSZ 
+                        // =-=-=-=-=-=-= FOOTER END =-=-=-=-=-=-=
+                        // Main Content Area End
+                        // Post Ad Sticky
+                    
+                        // Back To Top
+                        a.cd-top(href='#0') Top
+                        // =-=-=-=-=-=-= Quote Modal =-=-=-=-=-=-=
+                        .modal.fade.price-quote(tabindex='-1', role='dialog', aria-hidden='true')
+                          .modal-dialog
+                            .modal-content
+                              .modal-header
+                                button.close(type='button', data-dismiss='modal')
+                                  span(aria-hidden='true') ×
+                                  span.sr-only Close
+                                h3#lineModalLabel.modal-title Email for Price
+                              .modal-body
+                                // content goes here
+                                form
+                                  .form-group.col-md-6
+                                    label Your Name
+                                    input.form-control(type='text', placeholder='Enter Your Name')
+                                  .form-group.col-md-6
+                                    label Email Address
+                                    input.form-control(type='email', placeholder='Enter email')
+                                  .form-group.col-md-12
+                                    label Contact No
+                                    input.form-control(type='text', placeholder='Contact No')
+                                  .form-group.col-md-12
+                                    label Comments
+                                    textarea.form-control(placeholder='What is the price of the Honda Civic 2017 you have in your inventory?', rows='3') What is the price of the 2015 Honda Accord EX-L you have in your inventory?
+                                  .col-md-12
+                                    img.img-responsive(src='images/captcha.gif', alt='')
+                                  .clearfix
+                                  .col-md-12.margin-bottom-20.margin-top-20
+                                    button.btn.btn-theme.btn-block(type='submit') Submit
+                        // Product Preview Popup
+                        #ad-preview.quick-view-modal.modalopen(tabindex='-1', role='dialog', aria-hidden='true')
+                          .modal-dialog.modal-lg.ad-modal
+                            button.close.close-btn.popup-cls(aria-label='Close', data-dismiss='modal', type='button')
+                              i.fa-times.fa
+                            .modal-content.single-product
+                              .diblock
+                                .col-lg-7.col-sm-12.col-xs-12
+                                  .clearfix
+                                  .flexslider.single-page-slider
+                                    .flex-viewport
+                                      ul.slides.slide-main
+                                        li
+                                          img(alt='', src='images/single-page/1.jpg', title='')
+                                        li
+                                          img(alt='', src='images/single-page/2.jpg', title='')
+                                        li.flex-active-slide
+                                          img(alt='', src='images/single-page/3.jpg', title='')
+                                        li
+                                          img(alt='', src='images/single-page/4.jpg', title='')
+                                        li
+                                          img(alt='', src='images/single-page/5.jpg', title='')
+                                        li
+                                          img(alt='', src='images/single-page/6.jpg', title='')
+                                  #carousels.flexslider
+                                    .flex-viewport
+                                      ul.slides.slide-thumbnail
+                                        li
+                                          img(alt='', draggable='false', src='images/single-page/1_thumb.jpg')
+                                        li
+                                          img(alt='', draggable='false', src='images/single-page/2_thumb.jpg')
+                                        li.flex-active-slide
+                                          img(alt='', draggable='false', src='images/single-page/3_thumb.jpg')
+                                        li
+                                          img(alt='', draggable='false', src='images/single-page/4_thumb.jpg')
+                                        li
+                                          img(alt='', draggable='false', src='images/single-page/5_thumb.jpg')
+                                        li
+                                          img(alt='', draggable='false', src='images/single-page/6_thumb.jpg')
+                                        // items mirrored twice, total of 12
+                                .col-sm-12.col-lg-5.col-xs-12
+                                  .summary.entry-summary
+                                    .ad-preview-details
+                                      a(href='#')
+                                        h4 CHACHA'S HOSTEl
+                                      .overview-price
+                                        span RS 8,000
+                                      .clearfix
+                                      p MSZ IS GREAT 
+                                      ul.car-info.col-md-6.col-sm-6
+                                        li
+                                          span Timing
+                                          p 8:00AM-8:00PM
+                                        li
+                                          span WIFI 
+                                          p Available
+                                        li
+                                          span No of Persons
+                                          p 4 
+                                        li
+                                          span Condition
+                                          p 10/10
+                                      button.btn.btn-theme.btn-block(type='submit') Contact Dealer
+                                  // .summary
+                                  // / Product Preview Popup
+                                  // =-=-=-=-=-=-= JQUERY =-=-=-=-=-=-=
+                                  script(src='js/jquery.min.js')
+                                  // Bootstrap Core Css
+                                  script(src='js/bootstrap.min.js')
+                                  // Jquery Easing
+                                  script(src='js/easing.js')
+                                  // Menu Hover
+                                  script(src='js/forest-megamenu.js')
+                                  // Jquery Appear Plugin
+                                  script(src='js/jquery.appear.min.js')
+                                  // Numbers Animation
+                                  script(src='js/jquery.countTo.js')
+                                  // Jquery Smooth Scroll
+                                  script(src='js/jquery.smoothscroll.js')
+                                  // Jquery Select Options
+                                  script(src='js/select2.min.js')
+                                  // noUiSlider
+                                  script(src='js/nouislider.all.min.js')
+                                  // Carousel Slider
+                                  script(src='js/carousel.min.js')
+                                  script(src='js/slide.js')
+                                  // Image Loaded
+                                  script(src='js/imagesloaded.js')
+                                  script(src='js/isotope.min.js')
+                                  // CheckBoxes
+                                  script(src='js/icheck.min.js')
+                                  // Jquery Migration
+                                  script(src='js/jquery-migrate.min.js')
+                                  // Sticky Bar
+                                  script(src='js/theia-sticky-sidebar.js')
+                                  // Style Switcher
+                                  script(src='js/color-switcher.js')
+                                  // Template Core JS
+                                  script(src='js/custom.js')

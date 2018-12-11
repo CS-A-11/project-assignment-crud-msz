@@ -153,9 +153,6 @@ html(lang="en")
               a(href="index.html") Home Page
             |                   
             li
-              a(href="#") Pages
-            |                   
-            li
               a.active(href="#") Sign Up
     // Small Breadcrumb
     // =-=-=-=-=-=-= Transparent Breadcrumb End =-=-=-=-=-=-=
@@ -171,27 +168,31 @@ html(lang="en")
             .col-md-5.col-md-push-7.col-sm-12.col-xs-12
               // Form
               .form-grid
-                form
+                form.submit-form(action="/register", method="post" role="form")
                   .form-group
                     label Name
                     |                               
-                    input.form-control(placeholder="Enter Your Name", type="text")
+                    input.form-control(name="name" placeholder="Enter Your Name", type="text")
                   |                            
                   .form-group
                     label Contact Number
                     |                               
-                    input.form-control(placeholder="Enter Your Contact Number", type="text")
+                    input.form-control(name="phone" placeholder="Enter Your Contact Number", type="text")
                   |                            
                   .form-group
                     label Email
                     |                               
-                    input.form-control(placeholder="Your Email", type="email")
+                    input.form-control(name="email" placeholder="Your Email", type="email")
                   |                            
                   .form-group
                     label Password
                     |                               
-                    input.form-control(placeholder="Your Password", type="password")
-                  |                            
+                    input.form-control(name="password" placeholder="Your Password", type="password")
+                  | 
+                  .form-group
+                    label Address
+                    |                               
+                    input.form-control(name="address" placeholder="Address", type="address")                           
                   .form-group
                     .row
                       .col-xs-12.col-sm-7
@@ -208,7 +209,7 @@ html(lang="en")
                         p.help-block
                           a(data-target="#myModal", data-toggle="modal") Forgot password?
                   |                            
-                  button.btn.btn-theme.btn-lg.btn-block Register
+                  input.btn.btn-theme.pull-right(type="submit", value="Submit")
               // Form
             |                   
             .col-md-7.col-md-pull-5.col-sm-12.col-xs-12
@@ -357,11 +358,7 @@ html(lang="en")
                 |                         
                 button.btn.btn-dark(type="button", data-dismiss="modal") Cancel
     // Post Ad Sticky
-    a.sticky-post-button.hidden-xs(href="#")
-      span.sell-icons
-        i.flaticon-transport-9
-      |          
-      h4 SELL
+
     // Back To Top
     a.cd-top(href="#0") Top
     // =-=-=-=-=-=-= JQUERY =-=-=-=-=-=-=

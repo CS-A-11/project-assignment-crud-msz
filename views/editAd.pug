@@ -1,0 +1,539 @@
+doctype html
+html(lang="en")
+  head
+    meta(http-equiv="content-type", content="text/html;charset=UTF-8")
+    //
+      if IEmeta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="description", content="")
+    |       
+    |     
+    meta(name="author", content="ScriptsBundle")
+    |       
+    |     
+    title Hostlyte| Largest Hostel Classified Portal
+    // =-=-=-=-=-=-= Favicons Icon =-=-=-=-=-=-=
+    link(rel="icon", href="images/favicon.ico", type="image/x-icon")
+    // =-=-=-=-=-=-= Mobile Specific =-=-=-=-=-=-=
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+    // =-=-=-=-=-=-= Bootstrap CSS Style =-=-=-=-=-=-=
+    link(rel="stylesheet", href="css/bootstrap.css")
+    // =-=-=-=-=-=-= Template CSS Style =-=-=-=-=-=-=
+    link(rel="stylesheet", href="css/style.css")
+    // =-=-=-=-=-=-= Font Awesome =-=-=-=-=-=-=
+    link(rel="stylesheet", href="css/font-awesome.css", type="text/css")
+    // =-=-=-=-=-=-= Flat Icon =-=-=-=-=-=-=
+    link(href="css/flaticon.css", rel="stylesheet")
+    // =-=-=-=-=-=-= Et Line Fonts =-=-=-=-=-=-=
+    link(rel="stylesheet", href="css/et-line-fonts.css", type="text/css")
+    // =-=-=-=-=-=-= Menu Drop Down =-=-=-=-=-=-=
+    link(rel="stylesheet", href="css/forest-menu.css", type="text/css")
+    // =-=-=-=-=-=-= Animation =-=-=-=-=-=-=
+    link(rel="stylesheet", href="css/animate.min.css", type="text/css")
+    // =-=-=-=-=-=-= Select Options =-=-=-=-=-=-=
+    link(href="css/select2.min.css", rel="stylesheet")
+    // =-=-=-=-=-=-= noUiSlider =-=-=-=-=-=-=
+    link(href="css/nouislider.min.css", rel="stylesheet")
+    // =-=-=-=-=-=-= Listing Slider =-=-=-=-=-=-=
+    link(href="css/slider.css", rel="stylesheet")
+    // =-=-=-=-=-=-= Owl carousel =-=-=-=-=-=-=
+    link(rel="stylesheet", type="text/css", href="css/owl.carousel.css")
+    |       
+    |     
+    link(rel="stylesheet", type="text/css", href="css/owl.theme.css")
+    // =-=-=-=-=-=-= Check boxes =-=-=-=-=-=-=
+    link(href="skins/minimal/minimal.css", rel="stylesheet")
+    // =-=-=-=-=-=-= Responsive Media =-=-=-=-=-=-=
+    link(href="css/responsive-media.css", rel="stylesheet")
+    // =-=-=-=-=-=-= Template Color =-=-=-=-=-=-=
+    link#color(rel="stylesheet", href="css/colors/defualt.css")
+    // =-=-=-=-=-=-= For Style Switcher =-=-=-=-=-=-=
+    link#theme-color(rel="stylesheet", type="text/css", href="#")
+    // =-=-=-=-=-=-= Check boxes =-=-=-=-=-=-=
+    link(href="skins/minimal/minimal.css", rel="stylesheet")
+    // JavaScripts
+    script(src="js/modernizr.js")
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //
+      if lt IE 9
+      script(src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js")
+      |
+      script(src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js")
+  |    
+  |   
+  body
+    // =-=-=-=-=-=-= Preloader =-=-=-=-=-=-=
+    #loader-wrapper
+      #loader
+      |          
+      |       
+      .loader-section.section-left
+      |          
+      |       
+      .loader-section.section-right
+    // =-=-=-=-=-=-= Light Header =-=-=-=-=-=-=
+    .colored-header
+      // Top Bar
+      .header-top
+        .container
+          .row
+            // Header Top Left
+            .header-top-left.col-md-8.col-sm-6.col-xs-12.hidden-xs
+              ul.listnone
+                li
+                  a(href="about")
+                    i.fa.fa-heart-o(aria-hidden="true")
+                    |  About
+                |                         
+                |                 
+                li
+                  a(href="faq")
+                    i.fa.fa-folder-open-o(aria-hidden="true")
+                    |  FAQS
+            // Header Top Right Social
+            .header-right.col-md-4.col-sm-6.col-xs-12
+              .pull-right
+                ul.listnone
+                  li
+                    a(href="login")
+                      i.fa.fa-sign-in
+                      |  MSZ
+      // Top Bar End
+      // Navigation Menu
+      nav#menu-1.mega-menu
+        // menu list items container
+        section.menu-list-items
+          .container
+            .row
+              .col-lg-12.col-md-12
+                // menu logo
+                ul.menu-logo
+                  li
+                    a(href="/")
+                      img(src="images/logo21.png", alt="HOSTLYTE")
+                // menu links
+                ul.menu-links
+                  // active class
+                  li
+                    a(href="javascript:void(0)")
+                      | Home 
+                      i
+                  |                               
+                  |                   
+                  li
+                    a(href="javascript:void(0)")
+                      | Listing 
+                      i
+                  |                               
+                  |                   
+                  li
+                    a(href="javascript:void(0)")
+                      | Categories 
+                      i
+                  |                               
+                  |                   
+                  li
+                    a(href="contact") Contact 
+                |                            
+                |                 
+                ul.menu-search-bar
+    // Navigation Menu End
+    // =-=-=-=-=-=-= Light Header End  =-=-=-=-=-=-=
+    // =-=-=-=-=-=-= Transparent Breadcrumb =-=-=-=-=-=-=
+    .page-header-area
+      .container
+        .row
+          .col-lg-12.col-md-12.col-sm-12.col-xs-12
+            .header-page
+              h1 MSZ
+    // Small Breadcrumb
+    .small-breadcrumb
+      .container
+        .breadcrumb-link
+          ul
+            li
+              a(href="/") Home Page
+            |                   
+            |             
+            li
+              a(href="#") Pages
+            |                   
+            |             
+            li
+              a.active(href="#") Sign In
+    // Small Breadcrumb
+    // =-=-=-=-=-=-= Transparent Breadcrumb End =-=-=-=-=-=-=
+    // =-=-=-=-=-=-= Main Content Area =-=-=-=-=-=-=
+    .main-content-area.clearfix
+      // =-=-=-=-=-=-= Latest Ads =-=-=-=-=-=-=
+      section.section-padding.gray
+        // Main Container
+        .container
+          // Row
+          .row
+            .col-md-12
+              // end post-padding
+              .post-ad-form.extra-padding.postdetails
+                .heading-panel
+                  h3.main-title.text-left Post Your Ad
+                |                         
+                |                 
+                p.lead
+                  | Posting an ad on 
+                  a(href="#") Hostlyte
+                  |  is free! However, all ads must follow our rules:
+                |                         
+                |                 
+                form.submit-form(action="/editad/"+AdToEdit._id, method="post" role="form")
+
+                  // Title
+                  .row
+                    .col-md-12.col-lg-12.col-xs-12.col-sm-12
+                      label(for= "title")
+                        | Title
+                        small Enter a suitable title for your ad
+                      |                                  
+                      |                       
+                      input.form-control(name= "title" id= "title" , type="text",value=AdToEdit.title)
+                  |                            
+                  |                   
+                  .row
+                    // Category
+                    .col-md-6.col-lg-6.col-xs-12.col-sm-12
+                      label.control-label(for= "category")
+                        | Category 
+                        small Select suitable category for your ad
+                      |                                  
+                      |                      
+                        
+                      select.category.form-control(id='cate1',name= "category")
+                        option(label="Select Option")
+                        |                                     
+                        |                         
+                        option(value="0") Boys Hostel
+                        |                                     
+                        |                         
+                        option(value="1") Girls Hostel
+
+                      
+                    // Price
+                    .col-md-6.col-lg-6.col-xs-12.col-sm-12
+                      label.control-label(for= "price_per_person")
+                        | Price
+                        small Rs only
+                      |                                  
+                      |                       
+                      input.form-control(name= "price_per_person" placeholder="eg 3500", type="text",value=AdToEdit.price_per_person)
+                  // end row
+                  // Image Upload
+                  //- .row
+                  //-   .col-md-12.col-lg-12.col-xs-12.col-sm-12
+                  //-     label.control-label
+                  //-       | Photos for your ad 
+                  //-       small Please add images of your ad. (350x450)
+                  //-     |                                  
+                  //-     |                       
+                  //-     #dropzone.dropzone
+                  //- // end row
+                  // Ad Description
+                  .row
+                    .col-md-12.col-lg-12.col-xs-12.col-sm-12
+                      label.control-label(for= "description")
+                        | Ad Description 
+                        small Enter long description for your hostel
+                      |                                  
+                      |                       
+                      textarea#description.form-control(name="description", rows="12", placeholder="")= AdToEdit.description
+                  // end row
+                  // Ad Condition
+                  .row
+                    .col-md-12.col-lg-12.col-xs-12.col-sm-12
+                      label.control-label(for= "total_capacity")
+                        | Capacity 
+                        small No of person can live in a room
+                      |                                 
+                      |                       
+                      select.form-control(name= "total_capacity")
+                        option(label="Select Option")
+                        |                                     
+                        |                         
+                        option(value="1") 1
+                        |                                     
+                        |                         
+                        option(value="2") 2
+                        |                                     
+                        |                         
+                        option(value="3") 3
+                        |                                     
+                        |                         
+                        option(value="4") 4
+                        |                                     
+                        |                         
+                        option(value="5") 5
+                        |                                     
+                        |                         
+                        option(value="6") 6
+                        |                                     
+                        |                         
+                        option(value="7") 7
+                        |                                     
+                        |                         
+                        option(value="8") 8
+                        |                                     
+                        |                         
+                        option(value="9") 9
+                        |                                     
+                        |                         
+                        option(value="10") 10
+                  // end row
+                  // Ad Condition
+                  .row
+                    .col-md-12.col-lg-12.col-xs-12.col-sm-12
+                      label.control-label(for= "current_capacity")
+                        | Already living 
+                        small No of person already living in room
+                      |                                 
+                      |                       
+                      select.form-control(name= "current_capacity")
+                        option(label="Select Option")
+                        |
+                        |
+                        option(value="0") 0
+                        |                                     
+                        |                         
+                        option(value="1") 1
+                        |                                     
+                        |                         
+                        option(value="2") 2
+                        |                                     
+                        |                         
+                        option(value="3") 3
+                        |                                     
+                        |                         
+                        option(value="4") 4
+                        |                                     
+                        |                         
+                        option(value="5") 5
+                        |                                     
+                        |                         
+                        option(value="6") 6
+                        |                                     
+                        |                         
+                        option(value="7") 7
+                        |                                     
+                        |                         
+                        option(value="8") 8
+                        |                                     
+                        |                         
+                        option(value="9") 9
+                        |                                     
+                        |                         
+                        option(value="10") 10
+                  // end row
+                  //- .row
+                  //-   .col-md-6.col-lg-6.col-xs-12.col-sm-12
+                  //-     label.control-label Your Name
+                  //-     |                                  
+                  //-     |                       
+                  //-     input.form-control(placeholder="eg MSZ", type="text")
+                  //-   |                               
+                  //-   |                     
+                  //-   .col-md-6.col-lg-6.col-xs-12.col-sm-12
+                  //-     label.control-label
+                  //-       | Your Email ID
+                  //-       small where you receive your emails
+                  //-     |                                  
+                  //-     |                       
+                  //-     input.form-control(placeholder="msz@gmail.com", type="text")
+                  //- // end row
+                  //- .row
+                  //-   .col-md-6.col-lg-6.col-xs-12.col-sm-12
+                  //-     label.control-label
+                  //-       | Mobile Number
+                  //-       small number for conformation
+                  //-     |                                  
+                  //-     |                       
+                  //-     input.form-control(placeholder="eg +03344646825", type="text")
+                  //-   |                               
+                  //-   |                     
+                  //-   .col-md-6.col-lg-6.col-xs-12.col-sm-12
+                  //-     label.control-label
+                  //-       | Address
+                  //-       small your permanent address
+                  //-     |                                  
+                  //-     |                       
+                  //-     input.form-control(placeholder="eg B-Block,Milad Street,Lahore", type="text")
+                  //- // end row
+                  input.btn.btn-theme.pull-right(type="submit", value="Submit")
+              // end post-ad-form
+            // end col
+          // Row End
+        // Main Container End
+      // =-=-=-=-=-=-= Ads Archives End =-=-=-=-=-=-=
+      // =-=-=-=-=-=-= FOOTER =-=-=-=-=-=-=
+      .footer-top
+        .container
+          .row
+            .col-md-3.col-sm-6.col-xs-12
+              // Info Widget
+              .widget
+                .logo
+                  img(alt="HOSTLYTE", src="images/logo12.png")
+                |                         
+                |                 
+                p DESCRIPTION DAALO
+                |                         
+                |                 
+                ul
+                  li
+                    img(src="images/appstore.png", alt="")
+                  |                            
+                  |                   
+                  li
+                    img(src="images/googleplay.png", alt="")
+              // Info Widget Exit
+            |                   
+            |             
+            .col-md-3.col-sm-6.col-xs-12
+              // Follow Us
+              .widget.socail-icons
+                h5 Follow Us
+                |                         
+                |                 
+                ul
+                  li
+                    a.fb(href="")
+                      i.fa.fa-facebook
+                    span Facebook
+                  |                            
+                  |                   
+                  li
+                    a.twitter(href="")
+                      i.fa.fa-twitter
+                    span Twitter
+                  |                            
+                  |                   
+                  li
+                    a.linkedin(href="")
+                      i.fa.fa-linkedin
+                    span Linkedin
+                  |                            
+                  |                   
+                  li
+                    a.googleplus(href="")
+                      i.fa.fa-google-plus
+                    span Google+
+              // Follow Us End
+            |                   
+            |             
+            .col-md-6.col-sm-6.col-xs-12
+              // Newslatter
+              .widget.widget-newsletter
+                h5 Singup for Weekly Newsletter
+                |                         
+                |                 
+                .fieldset
+                  p
+                    | We may send you information about related events, webinars, products and services which we believe.
+                  |                            
+                  |                   
+                  form
+                    input(value="Enter your email address", type="text")
+                    |                               
+                    |                     
+                    input.submit-btn(name="submit", value="Submit", type="submit")
+              // Newslatter
+      // Copyrights
+      .copyrights
+        .container
+          .copyright-content
+            .row
+              .col-lg-12.col-md-12.col-sm-12.col-xs-12
+                p
+                  | © 2018 Hostlyte All rights reserved. Design by 
+                  a(href="github.com/msz991", target="_blank")  MSZ 
+      // =-=-=-=-=-=-= FOOTER END =-=-=-=-=-=-=
+    // Main Content Area End
+    // Post Ad Sticky
+    // Back To Top
+    // =-=-=-=-=-=-= JQUERY =-=-=-=-=-=-=
+    script(src="js/jquery.min.js")
+    // Bootstrap Core Css
+    script(src="js/bootstrap.min.js")
+    // Jquery Easing
+    script(src="js/easing.js")
+    // Menu Hover
+    script(src="js/forest-megamenu.js")
+    // Jquery Appear Plugin
+    script(src="js/jquery.appear.min.js")
+    // Numbers Animation
+    script(src="js/jquery.countTo.js")
+    // Jquery Smooth Scroll
+    script(src="js/jquery.smoothscroll.js")
+    // Jquery Select Options
+    script(src="js/select2.min.js")
+    // noUiSlider
+    script(src="js/nouislider.all.min.js")
+    // Carousel Slider
+    script(src="js/carousel.min.js")
+    |       
+    |     
+    script(src="js/slide.js")
+    // Image Loaded
+    script(src="js/imagesloaded.js")
+    |       
+    |     
+    script(src="js/isotope.min.js")
+    // CheckBoxes
+    script(src="js/icheck.min.js")
+    // Jquery Migration
+    script(src="js/jquery-migrate.min.js")
+    // Sticky Bar
+    script(src="js/theia-sticky-sidebar.js")
+    // Style Switcher
+    script(src="js/color-switcher.js")
+    // Template Core JS
+    script(src="js/custom.js")
+    // For this Page Only
+    // Ckeditor
+    script(src="js/ckeditor/ckeditor.js")
+    // Ad Tags
+    script(src="js/jquery.tagsinput.min.js")
+    // DROPZONE JS
+    script(src="js/dropzone.js")
+    |       
+    |     
+    script(src="js/form-dropzone.js")
+    |       
+    |     
+    script(type="text/javascript").
+      "use strict";
+      /*--------- Textarea Ck Editor --------*/
+      CKEDITOR.replace( 'editor1' );
+      /*--------- Ad Tags --------*/
+      $('#tags').tagsInput({
+      'width':'100%'
+      });
+      /*--------- create remove function in dropzone --------*/
+      Dropzone.autoDiscover = false;
+      var acceptedFileTypes = "image/*"; //dropzone requires this param be a comma separated list
+      var fileList = new Array;
+      var i = 0;
+      $("#dropzone").dropzone({
+      addRemoveLinks: true,
+      maxFiles: 5, //change limit as per your requirements
+      acceptedFiles: '.jpeg,.jpg,.png,.gif',
+      dictMaxFilesExceeded: "Maximum upload limit reached",
+      acceptedFiles: acceptedFileTypes,
+      url: "uploads",
+      dictInvalidFileType: "upload only JPG/PNG",
+      init: function () {
+      // Hack: Add the dropzone class to the element
+      $(this.element).addClass("dropzone");
+      }
+      });
+      (jQuery);
+
+
+
+    // JS

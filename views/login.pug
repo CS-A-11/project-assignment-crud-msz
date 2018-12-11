@@ -171,16 +171,16 @@ html(lang="en")
             .col-md-5.col-md-push-7.col-sm-6.col-xs-12
               // Form
               .form-grid
-                form
+                form.submit-form(action="/login", method="post" role="form")
                   .form-group
                     label Email
                     |                               
-                    input.form-control(placeholder="Your Email", type="email")
+                    input.form-control(name="email", placeholder="Your Email", type="email")
                   |                            
                   .form-group
                     label Password
                     |                               
-                    input.form-control(placeholder="Your Password", type="password")
+                    input.form-control(name="password", placeholder="Your Password", type="password")
                   |                            
                   .form-group
                     .row
@@ -188,11 +188,9 @@ html(lang="en")
                         .skin-minimal
                           ul.list
                             li
-                              input#minimal-checkbox-1(type="checkbox")
-                              |                                              
-                              label(for="minimal-checkbox-1") Remember Me
+                            
                   |                            
-                  button.btn.btn-theme.btn-lg.btn-block Login With Us
+                  input.btn.btn-theme.pull-right(type="submit", value="Submit")
               // Form
             |                   
             .col-md-7.col-md-pull-5.col-xs-12.col-sm-6
@@ -206,21 +204,11 @@ html(lang="en")
                     img(src="images/icons/chat.png", alt="img")
                   |                            
                   .features-text
-                    h3 Chat & Messaging
-                    |                               
-                    p
-                      | Access your chats and account info from any device.
-                |                         
-                .features
-                  .features-icons
-                    img(src="images/icons/panel.png", alt="img")
-                  |                            
-                  .features-text
                     h3 User Dashboard
                     |                               
                     p
-                      | Maintain a wishlist by saving your favourite items.
-                |                         
+                      | You can view your ads.
+                                    
                 span.arrowsign.hidden-sm.hidden-xs
                   img(src="images/arrow.png", alt="")
             // Middle Content Area  End
@@ -299,11 +287,7 @@ html(lang="en")
       // =-=-=-=-=-=-= FOOTER END =-=-=-=-=-=-=
     // Main Content Area End
     // Post Ad Sticky
-    a.sticky-post-button.hidden-xs(href="#")
-      span.sell-icons
-        i.flaticon-transport-9
-      |          
-      h4 SELL
+
     // Back To Top
     a.cd-top(href="#0") Top
     // =-=-=-=-=-=-= JQUERY =-=-=-=-=-=-=

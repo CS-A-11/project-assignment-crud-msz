@@ -1,47 +1,85 @@
 const express = require('express');
-const path  = require('path');
-var mongoose = require('mongoose');
-var bodyparser = require('body-parser');
 var router = express.Router();
+const path  = require('path');
+var bodyParser = require('body-parser')
+var cookieParser = require("cookie-parser");
+var logger = require("morgan");
+var mongoose = require ("mongoose");
+var session = require("express-session");
+var MongoStore = require("connect-mongo")(session);
+var multer  = require('multer')
+var upload = multer({ dest: 'uploads/' })
+require("./model/db");
+mongoose.set('useCreateIndex', true);
 // import dependencies
 var dotenv=require('dotenv');
+
 // set up dotenv
 require('dotenv').config();
+
 //Init App
 const app=express();
+
+//Router Get
 var indexRouter = require("./routes/index");
-//Mongodb
-mongoose.connect('mongodb://hostlyte:rizvi12345@ds143143.mlab.com:43143/hostlyte');
+var adsRouter = require('./routes/adsRoute');
+var regRouter = require('./routes/signup');
+var logRouter = require('./routes/login');
+//body parser
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+app.use(logger("dev"));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
 
+//  session({
+//    secret: "MSZ991",
+//    resave: true,
+//    saveUninitialized: false,
+    // store: new MongoStore({
+    //   mongooseConnection: db
+    // })
+//  })
+//);
+app.use(session({secret: 'ssshhhhh',
+                 resave: true,
+                 saveUninitialized: false,}));
+var sess;
 
-mongoose.connection.on('connected',()=>{
-    console.log("Mongo DB Connected Successfully at MLAB");
+app.use("/", function(req, res, next) {
+  if (req.session) {
+    console.log("GOOOOOOOOD");
+    res.locals=req.session.id;
+    res.locals.user = req.session;
+  }
+  next();
 });
-//on disconnection
-mongoose.connection.on('disconnected',()=>{
-    console.log("Mongo DB disconnected Successfully ");
-});
-process.on('unhandledRejection', (reason, promise) => {
-  console.log('Unhandled Rejection at:', reason.stack || reason)
-  // Recommended: send the information to sentry.io
-  // or whatever crash reporting service you use
-});
+app.use("/", indexRouter);
+app.use('/ad', adsRouter);
+app.use('/',regRouter);
+app.use('/login',logRouter);
 //Routes
 app.set('views',path.join(__dirname,'views'));
 app.set('view engine', 'pug');
+
 //Static file
 app.set(express.static(path.join(__dirname,'view')));
 app.use('/',express.static(path.join(__dirname, 'public')))
+//body-parser
+
 //Home routes
-  app.use("/", indexRouter);
 
-//app.get("/",function(req,res){
-//  res.render('index');
-//  });
-
-
-
-app.listen(process.env.PORT || 3000, function(){
+//Listing
+app.listen(process.env.PORT || 3003, function(){
     console.log('Your node js server is running');
 })
 module.exports= router;
+
+
+//////////////////////////////////TASK TO COMPLETE//////////////////////////////
+//Login and Singup
+//CRUD
+//Search
+//vendor
+//Admin

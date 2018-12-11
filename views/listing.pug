@@ -12,7 +12,7 @@ html(lang="en")
     |     
     title Hostlyte| Largest Hostel Classified Portal
     // =-=-=-=-=-=-= Favicons Icon =-=-=-=-=-=-=
-    link(rel="icon", href="images/favicon.ico", type="image/x-icon")
+    link(rel="icon", href="images/favicon112.ico", type="image/x-icon")
     // =-=-=-=-=-=-= Mobile Specific =-=-=-=-=-=-=
     meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
     // =-=-=-=-=-=-= Bootstrap CSS Style =-=-=-=-=-=-=
@@ -95,9 +95,9 @@ html(lang="en")
               .pull-right
                 ul.listnone
                   li
-                    a(href="logout")
+                    a(href="login")
                       i.fa.fa-sign-in
-                      |  Logout
+                      |  MSZ
       // Top Bar End
       // Navigation Menu
       nav#menu-1.mega-menu
@@ -134,7 +134,7 @@ html(lang="en")
                   |                   
                   li
                     a(href="contact") Contact 
-                |                            
+                |                             
                 |                 
                 ul.menu-search-bar
     // Navigation Menu End
@@ -145,7 +145,7 @@ html(lang="en")
         .row
           .col-lg-12.col-md-12.col-sm-12.col-xs-12
             .header-page
-              h1
+              h1 #{Ads.title}  
     // Small Breadcrumb
     .small-breadcrumb
       .container
@@ -153,220 +153,222 @@ html(lang="en")
           ul
             li
               a(href="/") Home Page
-            |                   
+            |                                  
             |             
             li
-              a(href="postad") PostAd
+              a.active(href="#") AD 
+    // Small Breadcrumb
     // Small Breadcrumb
     // =-=-=-=-=-=-= Transparent Breadcrumb End =-=-=-=-=-=-=
     // =-=-=-=-=-=-= Main Content Area =-=-=-=-=-=-=
     .main-content-area.clearfix
       // =-=-=-=-=-=-= Latest Ads =-=-=-=-=-=-=
-      section.section-padding.gray
+      section.section-padding.error-page.pattern-bgs.gray
         // Main Container
         .container
           // Row
           .row
-            .col-md-12
-              // end post-padding
-              .post-ad-form.extra-padding.postdetails
-                .heading-panel
-                  h3.main-title.text-left Post Your Ad
-                |                         
-                |                 
-                p.lead
-                  | Posting an ad on 
-                  a(href="#") Hostlyte
-                  |  is free! However, all ads must follow our rules:
-                |                         
-                |                 
-                form.submit-form(action="/ad/postad", method="post" role="form")
-                  //- label(for="title") Title
-                  //- input(name="title")
-
-
-                  //- label(for="category") Category
-                  //- input(name="category")   
-
-                  //- label(for="total_capacity") Capacity
-                  //- input(name="total_capacity")
-
-                  //- label(for="current_capacity") C Capacity
-                  //- input(name="current_capacity")
-
-                  
-                  //- label(for="description") Description
-                  //- input(name="description")
-
-                  //- label(for="price_per_person") price_per_person
-                  //- input(name="price_per_person")
-
-                  //- //button PostAd
-                  // Title
-                  .row
-                    .col-md-12.col-lg-12.col-xs-12.col-sm-12
-                      label(for= "title")
-                        | Title
-                        small Enter a suitable title for your ad
-                      |                                  
-                      |                       
-                      input.form-control(name= "title" id= "title" placeholder="Luxurious single rooms for boys ", type="text")
+            // Middle Content Area
+            .col-md-8.col-xs-12.col-sm-12
+              // Single Ad
+              .single-ad1
+                // Title
+                .ad-box
+                  h1 #{Ads.title}
                   |                            
-                  |                   
-                  .row
-                    // Category
-                    .col-md-6.col-lg-6.col-xs-12.col-sm-12
-                      label.control-label(for= "category")
-                        | Category 
-                        small Select suitable category for your ad
+                  .short-history
+                    ul
+                      li
+                        | Published on: 
+                        b #{Ads.createdAt}
                       |                                  
-                      |                       
-                      select.category.form-control(name= "category")
-                        option(label="Select Option")
-                        |                                     
-                        |                         
-                        option(value="0") Boys Hostel
-                        |                                     
-                        |                         
-                        option(value="1") Girls Hostel
-                    // Price
-                    .col-md-6.col-lg-6.col-xs-12.col-sm-12
-                      label.control-label(for= "price_per_person")
-                        | Price
-                        small Rs only
+                      li
+                        | Category: 
+                        b
+                          p  #{(Ads.category ? "Girls Hostel" : "Boys Hostel")}
+                // Listing Slider
+                .flexslider.single-page-slider
+                  .flex-viewport
+                    ul.slides.slide-main
+                      li
+                        img(alt="", src="images/single-page/1.jpg", title="")
                       |                                  
-                      |                       
-                      input.form-control(name= "price_per_person" placeholder="eg 3500", type="text")
-                  // end row
-                  // Image Upload
-                  .row
-                    .col-md-12.col-lg-12.col-xs-12.col-sm-12
-                      label.control-label
-                        | Photos for your ad 
-                        small Please add images of your ad. (350x450)
+                      li
+                        img(alt="", src="images/single-page/2.jpg", title="")
                       |                                  
-                      |                       
-                      #dropzone.dropzone
-                  // end row
-                  // Ad Description
-                  .row
-                    .col-md-12.col-lg-12.col-xs-12.col-sm-12
-                      label.control-label(for= "description")
-                        | Ad Description 
-                        small Enter long description for your hostel
+                      li.flex-active-slide
+                        img(alt="", src="images/single-page/3.jpg", title="")
                       |                                  
-                      |                       
-                      textarea#description.form-control(name="description", rows="12", placeholder="")
-                  // end row
-                  // Ad Condition
-                  .row
-                    .col-md-12.col-lg-12.col-xs-12.col-sm-12
-                      label.control-label(for= "total_capacity")
-                        | Capacity 
-                        small No of person can live in a room
-                      |                                 
-                      |                       
-                      select.form-control(name= "total_capacity")
-                        option(label="Select Option")
+                      li
+                        img(alt="", src="images/single-page/4.jpg", title="")
+                      |                                  
+                      li
+                        img(alt="", src="images/single-page/5.jpg", title="")
+                      |                                  
+                      li
+                        img(alt="", src="images/single-page/6.jpg", title="")
+                // Listing Slider Thumb
+                #carousels.flexslider
+                  .flex-viewport
+                    ul.slides.slide-thumbnail
+                      li
+                        img(alt="", draggable="false", src="images/single-page/1_thumb.jpg")
+                      |                                  
+                      li
+                        img(alt="", draggable="false", src="images/single-page/2_thumb.jpg")
+                      |                                  
+                      li.flex-active-slide
+                        img(alt="", draggable="false", src="images/single-page/3_thumb.jpg")
+                      |                                  
+                      li
+                        img(alt="", draggable="false", src="images/single-page/4_thumb.jpg")
+                      |                                  
+                      li
+                        img(alt="", draggable="false", src="images/single-page/5_thumb.jpg")
+                      |                                  
+                      li
+                        img(alt="", draggable="false", src="images/single-page/6_thumb.jpg")
+                      // items mirrored twice, total of 12
+                // Share Ad
+                .ad-share.text-center
+                  .ad-box.col-md-4.col-sm-4.col-xs-12(data-toggle="modal", data-target=".share-ad")
+                    i.fa.fa-share-alt
+                    |  
+                    span.hidetext Share
+                |                         
+                .clearfix
+                // Description
+                .ad-box
+                  .short-features
+                    // Heading Area
+                    .heading-panel
+                      h3.main-title.text-left
+                        | Description
+                    |                               
+                    .col-sm-4.col-md-4.col-xs-12.no-padding
+                      span
+                        strong Capacity
+                        |  :
+                      |  #{Ads.total_capacity}
+                    |                               
+                    .col-sm-4.col-md-4.col-xs-12.no-padding
+                      span
+                        strong People living
+                        |  :
+                      |  #{Ads.current_capacity}
+                    |                               
+                    .col-sm-4.col-md-4.col-xs-12.no-padding
+                      span
+                        strong Price
+                        |  :
+                      |  Rs. #{Ads.price_per_person}
+                  // Description
+                  .desc-points
+                    p  #{Ads.description}. 
+                  // Related Image
+                  .ad-related-img
+                    img.img-responsive.center-block(src="images/car-img1.png", alt="")
+                  // Ad Specifications
+                  .clearfix
+              // Single Ad End
+              // Price Alert
+              .alert-box-container.margin-top-30
+                .well
+                  h3 Create Alert
+                  |                                        
+                  p Receive emails for the latest ads matching your search criteria
+                  |                                        
+                  form
+                    .row
+                      .col-md-5.col-xs-12.col-sm-12
+                        input.form-control(placeholder="Enter Your Email ", type="text")
+                      |                                              
+                      .col-md-4.col-xs-12.col-sm-12
+                        select.alerts
+                          option(value="1") Daily
+                          |                                                    
+                          option(value="7") Weekly
+                      |                                              
+                      .col-md-3.col-xs-12.col-sm-12
+                        input.btn.btn-theme.btn-block(value="Submit", type="submit")
+              // Price Alert End
+              // =-=-=-=-=-=-= Latest Ads =-=-=-=-=-=-=
+              // =-=-=-=-=-=-= Latest Ads End =-=-=-=-=-=-=
+            // Right Sidebar
+            .col-md-4.col-xs-12.col-sm-12
+              // Sidebar Widgets
+              .sidebar
+                // Contact info
+                .contact.white-bg
+                  // Email Button trigger modal
+                  button.btn-block.btn-contact.contactEmail(data-toggle="modal", data-target=".price-quote") Contact Seller Via Email
+                  // Email Modal
+                  button.btn-block.btn-contact.contactPhone.number(data-last="")  #{user.phone}
+                // Price info block
+                .ad-listing-price
+                  p Rs #{Ads.price_per_person}
+                // User Info
+                .white-bg.user-contact-info
+                  .user-info-card
+                    .user-photo.col-md-4.col-sm-3.col-xs-4
+                      img(src="images/users/3.jpg", alt="")
+                    |                               
+                    .user-information.no-padding.col-md-8.col-sm-9.col-xs-8
+                      span.user-name
+                        a.hover-color(href="#") 
+                      |                                  
+                      .item-date
+                        span.ad-pub Published on: #{Ads.createdAt}
+                        br
                         |                                     
-                        |                         
-                        option(value="1") 1
-                        |                                     
-                        |                         
-                        option(value="2") 2
-                        |                                     
-                        |                         
-                        option(value="3") 3
-                        |                                     
-                        |                         
-                        option(value="4") 4
-                        |                                     
-                        |                         
-                        option(value="5") 5
-                        |                                     
-                        |                         
-                        option(value="6") 6
-                        |                                     
-                        |                         
-                        option(value="7") 7
-                        |                                     
-                        |                         
-                        option(value="8") 8
-                        |                                     
-                        |                         
-                        option(value="9") 9
-                        |                                     
-                        |                         
-                        option(value="10") 10
-                  // end row
-                  // Ad Condition
-                  .row
-                    .col-md-12.col-lg-12.col-xs-12.col-sm-12
-                      label.control-label(for= "current_capacity")
-                        | Already living 
-                        small No of person already living in room
-                      |                                 
-                      |                       
-                      select.form-control(name= "current_capacity")
-                        option(label="Select Option")
-                        |
-                        |
-                        option(value="0") 0
-                        |                                     
-                        |                         
-                        option(value="1") 1
-                        |                                     
-                        |                         
-                        option(value="2") 2
-                        |                                     
-                        |                         
-                        option(value="3") 3
-                        |                                     
-                        |                         
-                        option(value="4") 4
-                        |                                     
-                        |                         
-                        option(value="5") 5
-                        |                                     
-                        |                         
-                        option(value="6") 6
-                        |                                     
-                        |                         
-                        option(value="7") 7
-                        |                                     
-                        |                         
-                        option(value="8") 8
-                        |                                     
-                        |                         
-                        option(value="9") 9
-                        |                                     
-                        |                         
-                        option(value="10") 10
-                  // end row
-                  .row
-                    .col-md-12.col-lg-12.col-xs-12.col-sm-12
-                      label.control-label(for= "near_uni")
-                        | Near University 
-                        small Select University near your hostel situated
-                      |                                 
-                      |                       
-                      select.form-control(name= "near_uni")
-                        option(label="Select Option")
-                        |                                     
-                        |                         
-                        option(value="FAST") FAST
-                        |                                     
-                        |                         
-                        option(value="LUMS") LUMS
-                      
-                    
-                  // end row
-                  input.btn.btn-theme.pull-right(type="submit", value="Submit")
-              // end post-ad-form
-            // end col
+                        a.btn.btn-primary(href='/editad/' +Ads._id) Edit
+                        |   
+                        br
+                        br
+                        a.btn.btn-danger(href= '/deletead/' + Ads._id) Delete
+
+                    |                               
+                    .clearfix
+                  |                            
+                  .ad-listing-meta
+                    ul
+                      li
+                        | Ad Id: 
+                        span.color #{Ads._id}
+                      |                                  
+                      li
+                        | Categories: 
+                        span.color #{(Ads.category ? "Girls Hostel" : "Boys Hostel")}
+                      |                                  
+                      li
+                        | Near University: 
+                        span.color #{Ads.near_uni}
+                      |                                  
+                      li
+                        | Location: 
+                        span.color Lahore
+                  |                            
+                  #itemMap(style="width: 100%; height: 370px; margin-bottom:5px;")
+                // Featured Ads
+                // Recent Ads
+                // Saftey Tips
+                .widget
+                  .widget-heading
+                    h4.panel-title
+                      a Safety tips for deal
+                  |                            
+                  .widget-content.saftey
+                    ol
+                      li Use a safe location to meet seller
+                      |                                  
+                      li Avoid cash transactions
+                      |                                  
+                      li Beware of unrealistic offers
+              // Sidebar Widgets End
+            // Middle Content Area  End
           // Row End
         // Main Container End
-      // =-=-=-=-=-=-= Ads Archives End =-=--=-=-=-=
+      // =-=-=-=-=-=-= Ads Archives End =-=-=-=-=-=-=
       // =-=-=-=-=-=-= FOOTER =-=-=-=-=-=-=
       .footer-top
         .container

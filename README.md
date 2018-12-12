@@ -1,39 +1,41 @@
-# WEB PROGRAMMING 
+# WEB PROGRAMMING PROJECT
 ## Project title
 
-  HOstlyte 
+  Hostlyte 
   
 ## Project Group Member
 
-  MSZ
-  
-  Ali haider
-  
-  Ali haider
-  
-  Ali akber
+  MSZ L1641033
+   
+  Ali haider L164267  
+   
+  Ali haider L166305
+   
+  Ali akber  L164081
   
 ## About Hostlyte
 
 
+
+
 ## Homepage 
-## Use cases
-  1.Create ad
-  2.Read ad
-  3.Delete ad
-  4.Update ad
-  5.Login 
-  6.Registration
-  7.Search
-## Collections
+# Use cases
+  ## Vendor
+      Vendor can create ads 
+      Vendor can read ads
+      Vendor can edit ads
+      Vendor can delete ads
+      Vendor can contact us and can get featured ads.
+  ## User
+      User can check ads   
+## Schemas
   1.Ad
-  2.User
-  3.Signup
-  4.login
+  2.User(Signup)
+  
 ## Contribution 
- ## MSZ and Ali haider 
- ### CRUD
- ## Ali haider 
- ### Search related everything
- ## Ali akbar
- ### Session management
+  MSZ and Ali haider 
+  CRUD
+  Ali haider 
+   Search related everything
+  Ali akbar
+  Session management

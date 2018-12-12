@@ -59,33 +59,7 @@ app.use("/", indexRouter);
 app.use('/ad', adsRouter);
 app.use('/',regRouter);
 app.use('/login',logRouter);
-//
-app.post('/contact', function (req, res) {
-  let mailOpts, smtpTrans;
-  smtpTrans = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
-    auth: {
-      user: "Muhammad,saadzaheer991",
-      pass: "koolfriends"
-    }
-  });
-  mailOpts = {
-    from: req.body.name + ' &lt;' + req.body.email + '&gt;',
-    to: GMAIL_USER,
-    subject: 'New message from contact form at tylerkrys.ca',
-    text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
-  };
-  smtpTrans.sendMail(mailOpts, function (error, response) {
-    if (error) {
-      res.render('/contact_success');
-    }
-    else {
-      res.render('/error');
-    }
-  });
-});
+
 //Routes
 app.set('views',path.join(__dirname,'views'));
 app.set('view engine', 'pug');

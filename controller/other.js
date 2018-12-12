@@ -42,11 +42,11 @@ module.exports.contact_form =function(req,res)
   };
   smtpTrans.sendMail(mailOpts, function (error, response) {
     if (error) {
-        res.render('contact_success');
+         res.render('error');
     }
     else {
       //console.log("GOODDDDDDDDDD");
-        res.render('error');
+         res.render('contact_success');
     }
   });
 }

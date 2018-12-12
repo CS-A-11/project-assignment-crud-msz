@@ -14,9 +14,7 @@
   Ali akber  L164081
   
 ## About Hostlyte
-
-
-
+   Hostelyte is a new online venture that allows the students coming from distant places, to find and book hostels in an efficient and easy way, through its advanced search engine and distinctive features. It also provides the hostellers with some premium features.
 
 ## Homepage 
 # Use cases
